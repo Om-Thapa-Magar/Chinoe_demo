@@ -1,0 +1,2016 @@
+{
+    "theme": {
+        "white": "#fffeee",
+        "black": "#000000",
+        "grey": "#595959",
+        "lineD": "rgba(255,254,238,.16)",
+        "lineL": "rgba(0,0,0,.16)",
+        "font": "'Special Elite','Courier New',Courier,monospace",
+        "fontFace": "",
+        "s0": "clamp(8px,.72vw,10px)",
+        "s1": "clamp(11.5px,1.02vw,14.5px)",
+        "s2": "clamp(12.5px,1.22vw,16.5px)",
+        "s3": "clamp(14.5px,1.62vw,21px)",
+        "s4": "clamp(22px,4.2vw,55px)",
+        "s5": "clamp(20px,2.5vw,35px)",
+        "sec": "80vh",
+        "ease": "cubic-bezier(.16,1,.3,1)",
+        "slideMs": 11000
+    },
+    "assets": {
+        "heroLogo": "img/wordmark-white.png",
+        "intro": "assets/video/intro.mp4",
+        "workBand": "assets/video/work-bts.mp4",
+        "workBandPoster": "assets/video/poster-work-bts.jpg",
+        "contactBand": "assets/video/web-maya-ma.mp4",
+        "contactBandPoster": "assets/video/poster-maya-ma.jpg"
+    },
+    "pages": {
+        "team": {
+            "eyebrow": "Team Chinoé",
+            "title": "Love, Passion & Film",
+            "lead": "Team Chinoé is the full creative and operational engine behind Chinoétales, direction, cinematography, production design, art direction, editing, styling, and the operations that hold it all together. Meet the people behind the work."
+        },
+        "work": {
+            "eyebrow": "Chinoétales Productions",
+            "title": "Catalogue of Work",
+            "lead": "A working reference of our released music-video output, titles, in-house director credits, and the artists we've built with."
+        },
+        "contact": {
+            "eyebrow": "Work With Us",
+            "title": "Let's Talk.",
+            "lead": "Have a project? Want to collaborate, commission a film, or need creative consultation? Every conversation begins here."
+        }
+    },
+    "settings": {
+        "statVideos": "100+",
+        "statYears": "2021–26",
+        "statArtists": "50+",
+        "statDirectors": "20+",
+        "contactEmail1": "chinoetales@gmail.com",
+        "phones": [
+            "+977 9700043499",
+            "+977 9700043489",
+            "+977 9700043479"
+        ],
+        "location": "Based in Kathmandu, Nepal\nAvailable for projects globally",
+        "playlist": "https://www.youtube.com/watch?v=DZ4BtMpaJaU&list=PL9Z9We-FA4DdMxamqRL4m3N7bARTvdkwo",
+        "social": [
+            {
+                "n": "YouTube",
+                "u": "https://www.youtube.com/@chinoetalesofficial"
+            },
+            {
+                "n": "Instagram",
+                "u": "https://www.instagram.com/chinoetales.productions/"
+            },
+            {
+                "n": "Facebook",
+                "u": "https://www.facebook.com/chinoetales.productions"
+            },
+            {
+                "n": "LinkedIn",
+                "u": "https://www.linkedin.com/company/chino%C3%A9tales-productions/"
+            },
+            {
+                "n": "TikTok",
+                "u": "https://www.tiktok.com/@chinoetalesofficial"
+            },
+            {
+                "n": "Pinterest",
+                "u": "https://www.pinterest.com/chinoetalesofficial/"
+            },
+            {
+                "n": "Giphy",
+                "u": "https://giphy.com/channel/chinoetalesofficial"
+            }
+        ],
+        "copyright": "© 2026 Chinoétales Films Pvt. Ltd."
+    },
+    "directors": [
+        {
+            "a": "Abhi Sampang Rai",
+            "role": "CEO / Director",
+            "style": "Cinematic Storytelling",
+            "about": "Leads Chinoétales as both a company and a creative force, setting the studio's vision while staying hands-on in the director's chair. His signature combines bold visual aesthetics with deeply emotional storytelling, translating lyrical content into powerful visual metaphors.",
+            "works": [
+                "<b>Sparsha Sangeet</b> · Purna Rai & Dajubhaiharu",
+                "<b>Ma Mare Pani</b> · Swar",
+                "<b>Soltini</b> · Ekdev Limbu",
+                "<b>Nindra Ma</b> · The Solace",
+                "<b>Maya Ko Aago</b> · Rockheads"
+            ],
+            "q": "\"I believe every song carries a visual story waiting to be discovered. Our job is not to create new stories, but to excavate the emotional truth already embedded in the music.\"",
+            "photo": "assets/img/team/abhi.jpg"
+        },
+        {
+            "a": "Bikesh Magar",
+            "role": "CTO / DOP",
+            "style": "Light & Composition",
+            "about": "The technical backbone of Chinoétales' image-making, leading the camera department while shaping the studio's broader technical direction and equipment strategy. A cinematographer with a sharp eye for light and composition.",
+            "works": [
+                "<b>Ma Mare Pani</b> · Swar",
+                "<b>Like Jennie</b> · Cover Project",
+                "Lead DOP across commercials & music videos"
+            ],
+            "q": "\"Technical excellence is the foundation upon which artistic vision stands. Every decision, from camera movement to colour temperature, serves the story.\"",
+            "photo": "assets/img/team/bikesh.jpg"
+        },
+        {
+            "a": "Shristi Rai",
+            "role": "CFO / Production Designer",
+            "style": "World-Building",
+            "about": "Holds the financial backbone of Chinoétales together while shaping the visual world of every set she designs, blending a producer's discipline with a designer's eye for emotional authenticity and cultural sensitivity.",
+            "works": [
+                "<b>Jhim Jhimaune Aankha</b> · Ekdev Limbu",
+                "<b>Hey Sailaa</b> · Abhaya & The Steam Engines",
+                "Production design across flagship projects"
+            ],
+            "q": "\"The most powerful stories are the ones that feel inevitable, where every visual choice seems like the only possible choice. That's when art happens.\"",
+            "photo": "assets/img/team/shristi.jpg"
+        },
+        {
+            "a": "Aadi Pahari",
+            "role": "Operational Manager",
+            "style": "Flawless Execution",
+            "about": "Keeps Chinoétales running, the person who turns a creative brief into a schedule, a schedule into a shoot day, and a shoot day into a delivered project. Ground-level experience across productions of every scale means nothing falls through the cracks.",
+            "works": [],
+            "q": "\"Great productions aren't built on great ideas alone, they're built on flawless execution. My role is making sure the team can focus on the work, not the logistics.\"",
+            "photo": "assets/img/team/aadi.jpg"
+        },
+        {
+            "a": "Santosh S. Thakuri",
+            "role": "Creative Head",
+            "style": "Contemporary Energy",
+            "about": "Brings fresh, contemporary energy to Chinoétales' creative direction, shaping the studio's evolving visual language, pushing projects toward dynamic, digital-age storytelling while staying rooted in cultural authenticity.",
+            "works": [
+                "Contemporary music video & commercial projects",
+                "Ongoing creative direction across the pipeline"
+            ],
+            "q": "\"Every generation has its own visual language. My goal is to help our stories find expressions that feel true to this moment, honest, dynamic, and authentic.\"",
+            "photo": "assets/img/team/santosh.jpg"
+        },
+        {
+            "a": "Devarshi.S",
+            "role": "Creative Director",
+            "style": "Visual Precision",
+            "about": "Shapes the creative backbone of every production, translating raw concepts into a coherent visual and narrative direction, with meticulous composition, complex technical problem-solving, and an unwavering commitment to artistic integrity.",
+            "works": [
+                "<b>Ma Mare Pani</b> · Swar",
+                "<b>Makhamali</b> · The Hulaki",
+                "<b>Mandainani Mana</b> · Ekdev Limbu"
+            ],
+            "q": "\"Technology should become invisible so the story can become everything. That's the standard every creative decision has to meet.\"",
+            "photo": "assets/img/team/devarshi.jpg"
+        },
+        {
+            "a": "Kiwa Khimdung Rai",
+            "role": "Cinematographer",
+            "style": "Motion & Frame",
+            "about": "Brings a sharp visual instinct to every frame he shoots, serving the story through light, movement, and composition rather than spectacle for its own sake, across music videos, commercials, and documentary-style projects.",
+            "works": [],
+            "q": "\"A shot only works if it disappears into the story. My job is to make every frame feel like it couldn't have been captured any other way.\"",
+            "photo": "assets/img/team/kiwa.jpg"
+        },
+        {
+            "a": "Samasti Rai",
+            "role": "Art Director",
+            "style": "Production Design",
+            "about": "Builds the visual world every Chinoétales project lives in, from set dressing to props to the overall aesthetic language of a production. Art direction is never an afterthought; it's baked into the story from day one.",
+            "works": [
+                "<b>Jhim Jhimaune Aankha</b> · Ekdev Limbu",
+                "Art direction across music video & commercial projects"
+            ],
+            "q": "\"Great production design should never call attention to itself, it should just feel like the only world this story could exist in.\"",
+            "photo": "assets/img/team/samasti.jpg"
+        },
+        {
+            "a": "Ongdi Moktan",
+            "role": "Art Director",
+            "style": "Detail & Craft",
+            "about": "Supports the art department across every stage of production, from prep and sourcing through on-set execution. An eye for detail that keeps the art department running smoothly under pressure.",
+            "works": [],
+            "q": "\"The details nobody notices are usually the ones holding the whole shot together.\"",
+            "photo": "assets/img/team/ongdi.jpg"
+        },
+        {
+            "a": "Dipika Rai",
+            "role": "Content Manager",
+            "style": "Story & Reach",
+            "about": "Manages how Chinoétales' work reaches the world, coordinating content across platforms, timelines, and campaigns, from behind-the-scenes documentation to full release strategy for finished projects.",
+            "works": [],
+            "q": "\"A great film still needs the right story told about how it reaches people. That's the part of the job I care about most.\"",
+            "photo": "assets/img/team/dipika.jpg"
+        },
+        {
+            "a": "Arbind",
+            "role": "DIT",
+            "style": "Data Integrity",
+            "about": "Responsible for the integrity of Chinoétales' footage from the moment it's captured to the moment it reaches the edit suite, data management, on-set backups, and first-pass technical quality checks.",
+            "works": [],
+            "q": "\"Nobody notices the DIT until something goes wrong. My job is making sure that never happens.\"",
+            "photo": "assets/img/team/arbind.jpg"
+        },
+        {
+            "a": "Nichal Gurung",
+            "role": "Editor",
+            "style": "Rhythm & Pacing",
+            "about": "Shapes the final rhythm of Chinoétales' projects in the edit suite. With an innate sense of pacing and music-visual synchronisation, his editing is where performance, cinematography, and story finally come together.",
+            "works": [],
+            "q": "\"Editing is where the story is truly told. When the cuts disappear, that's when the audience stops watching and starts feeling.\"",
+            "photo": "assets/img/team/nischal.jpg"
+        },
+        {
+            "a": "Bomi Rai",
+            "role": "Stylist",
+            "style": "Character & Look",
+            "about": "Shapes how every artist and cast member looks on screen, wardrobe, styling, and the visual identity that has to hold up under studio lights and outdoor locations alike, always built for both camera and story.",
+            "works": [],
+            "q": "\"Styling isn't decoration, it's characterisation. What someone wears has to tell you who they are before they say a single word.\"",
+            "photo": "assets/img/team/bomi.jpg"
+        }
+    ],
+    "works": [
+        {
+            "t": "Maya Ma",
+            "a": "Purna Rai & Dajubhaiharu",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "5yuuRveinFc",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/maya-ma.jpg",
+            "story": "\"In love\" — Purna Rai's unmistakable voice carrying a song about being fully, helplessly inside a feeling, with visuals to match its warmth.",
+            "notes": [
+                "Shristi Rai's first executive-producer credit; Bikesh Magar covered camera, edit, VFX, and color across the entire post pipeline."
+            ],
+            "seo": "Purna Rai Maya Ma music video, Maya Ma official video, Purna Rai new song"
+        },
+        {
+            "t": "Laijau Malai",
+            "a": "Tribal Rain",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "ntKzGQEDBXs",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Make-Up & Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "Behind Credits",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Take me away\" — a yearning to be carried somewhere else entirely, given weight by Tribal Rain's beloved catalogue and released on Valentine's Day.",
+            "notes": [
+                "A high-anticipation release for one of Nepal's most cherished bands, premiered on Feb 14 with a full BTS companion film shot by Santosh Shah Thakuri."
+            ],
+            "seo": "Tribal Rain Laijau Malai music video, Laijau Malai official video, Tribal Rain new song 2025"
+        },
+        {
+            "t": "Ma Mare Pani",
+            "a": "Swar",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "lsqbpw67hSs",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/ma-mare-pani.jpg",
+            "story": "\"Even if I die\" — devotion pushed to its absolute limit, a love professed beyond the boundary of life itself.",
+            "notes": [
+                "A full-department production with Santosh Shah Thakuri managing post — the workflow template the studio now uses on most flagship videos."
+            ],
+            "seo": "Swar Ma Marey Pani music video, Ma Marey Pani official video"
+        },
+        {
+            "t": "Sparsha Sangeet",
+            "a": "Purna Rai & Dajubhaiharu",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "K-w04FG6eyI",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "pd": "Shristi Rai",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                }
+            ],
+            "keyart": "assets/img/posters/sparsha-sangeet.jpg",
+            "e": "Robin Shrestha & Bikesh Magar & Ayush Suwal",
+            "col": "Bikesh Magar",
+            "story": "\"The music of touch\" — a tactile, sensory love song rendered as a series of moments where sound and touch blur into one feeling.",
+            "notes": [
+                "One of the studio's largest crews to date — a three-editor post team and production support from Kaagaz Productions, whose members (Arshu Shrestha, Ongdi Moktan, Rushal Shrestha) later became ChinoeTales regulars."
+            ],
+            "seo": "Purna Rai Sparsha Sangeet music video, Sparsha Sangeet official video, Purna Rai Dajubhaiharu"
+        },
+        {
+            "t": "Soltini",
+            "a": "Ekdev Limbu",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "HU5oZNvLmw8",
+            "cat": "Music Video",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Cinematographer",
+                    "n": "Bikesh Magar & Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai & Shristi Rai"
+                },
+                {
+                    "r": "Associate Cinematographer",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "Associate Editor",
+                    "n": "Sobit Magar"
+                }
+            ],
+            "story": "\"Soltini\" — a playful, flirtatious courtship rooted in eastern-Nepal solti/soltini banter, full of teasing back-and-forth energy.",
+            "notes": [
+                "Kiwa Khimdung's first cinematography credit with the studio, joining a full art and styling department led by the Rai sisters."
+            ],
+            "seo": "Ekdev Limbu Soltini music video, Soltini official video, solti soltini song"
+        },
+        {
+            "t": "K Garu",
+            "a": "John Rai & The Locals",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "fGF10RLUm1U",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Co-Director",
+                    "n": "Abhi Sampang Rai"
+                },
+                {
+                    "r": "Cast",
+                    "n": "Samasti Rai & Uttam Rai"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Assistant Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "Post Production",
+                    "n": "Chinoe VFX"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Fashion Designer",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "story": "\"What do I do?\" — the helpless spiral of loving someone you can't reach, played out by returning on-screen pair Samasti Rai and Uttam Rai.",
+            "notes": [
+                "First project credited to the in-house post unit \"Chinoe VFX\" — the studio formalizing its post-production arm."
+            ],
+            "seo": "John Rai K Garu music video, K Garu official video, John Rai and The Locals"
+        },
+        {
+            "t": "Nindra Ma",
+            "a": "The Solace",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "zWVERn9EfWE",
+            "cat": "Music Video",
+            "story": "\"In sleep\" — a dreamscape video where the line between what's dreamed and what's remembered keeps dissolving.",
+            "notes": [
+                "A dream-logic concept supported by Saurav Shakya's VFX; guest editor Amin Rai cut the project."
+            ],
+            "seo": "The Solace Nindra Ma music video, Nindra Ma official video"
+        },
+        {
+            "t": "Jhim Jhimaune Aankha",
+            "a": "Ekdev Limbu",
+            "d": "Shristi Rai & Samasti Rai",
+            "y": "2024",
+            "id": "DZ4BtMpaJaU",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/jhim-jhimaune-aankha.jpg",
+            "story": "\"Twinkling eyes\" — falling for someone one blink at a time; a soft-focus romance built on close-ups and light.",
+            "notes": [
+                "The Rai sisters' first co-directed project — directing and art-directing simultaneously, a double role unique to this release."
+            ],
+            "seo": "Ekdev Limbu Jhim Jhimaune Aankha music video, Jhim Jhimaune Aankha official video"
+        },
+        {
+            "t": "Hey Sailaa",
+            "a": "Abhaya & The Steam Engines",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "83B-_ibtvYU",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Abhi Sampang Rai & Bikesh Magar",
+            "col": "Devarshi.S",
+            "credits": [
+                {
+                    "r": "Co-Director",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Creative Director",
+                    "n": "Devarshi.S"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai & Ongdi Moktan"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai & Samasti Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Associate Manager",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Hey Saila\" — a folk-rock romp with one of Nepal's most storied live bands, built around the teasing call-out of the title.",
+            "notes": [
+                "A twelve-credit crew for veteran act Abhaya & The Steam Engines — among the studio's fullest productions of 2025."
+            ],
+            "seo": "Abhaya and The Steam Engines Hey Saila music video, Hey Saila official video"
+        },
+        {
+            "t": "Bhagyamaani",
+            "a": "The Hulaki",
+            "d": "Arshu Shrestha",
+            "y": "2025",
+            "id": "zsTjVCaOWw8",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/bhagyamaani.jpg",
+            "story": "\"Fortunate\" — counting the luck of ordinary blessings; a gratitude song shot with warmth rather than gloss.",
+            "notes": [
+                "Arshu Shrestha's second directing credit, this time with Bikesh Magar on camera and Santosh Shah Thakuri supervising production."
+            ],
+            "seo": "The Hulaki Bhagyamaani music video, Bhagyamaani official video"
+        },
+        {
+            "t": "Saathma",
+            "a": "Nineties",
+            "d": "Bikesh Magar",
+            "y": "2024",
+            "id": "uuDfIOf1XOE",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Co-Director",
+                    "n": "Santosh S. Thakuri"
+                },
+                {
+                    "r": "Creative Director",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"By my side\" — a song about the people who stay, shot as an understated portrait of companionship.",
+            "notes": [
+                "Bikesh Magar's directorial debut for the studio, co-directed with Santosh Shah Thakuri in his first creative lead credit."
+            ],
+            "seo": "Nineties Saathma music video, Saathma official video, Nineties Nepali band"
+        },
+        {
+            "t": "Fasaideu",
+            "a": "Vek",
+            "d": "Bikesh Magar",
+            "y": "2026",
+            "id": "Mh6AZNA6UzE",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/fasaideu.jpg",
+            "story": "\"Entangle me\" — a flirtatious dare of a song; the video leans into playful tension and push-pull chemistry.",
+            "notes": [
+                "Bikesh Magar directing and shooting simultaneously, co-directed with Santosh Shah Thakuri — the same pairing as \"Saathma\", now with a fuller crew."
+            ],
+            "seo": "Vek Fasaideu music video, Fasaideu official video, Vek new song"
+        },
+        {
+            "t": "Yei Maya Ho",
+            "a": "Vek",
+            "d": "Bikesh Magar",
+            "y": "2026",
+            "id": "eV3V2JHr9sU",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Santosh S. Thakuri"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Sobit Magar"
+                },
+                {
+                    "r": "Project Coordinator",
+                    "n": "Aadi Pahari"
+                }
+            ],
+            "story": "\"This is love\" — the moment of naming the feeling out loud; Vek's second ChinoeTales video answers the flirtation of \"Fasaideu\" with certainty.",
+            "notes": [
+                "The Bikesh Magar / Santosh Shah Thakuri directing team's third outing together, and their second with Vek."
+            ],
+            "seo": "Vek Yei Maya Ho music video, Yei Maya Ho official video"
+        },
+        {
+            "t": "Makhamali",
+            "a": "The Hulaki",
+            "d": "Devarshi.S",
+            "y": "2026",
+            "id": "tVs5gi5vw6w",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/makhamali.jpg",
+            "p": "Abhi Sampang Rai",
+            "e": "Bikesh Magar & Devarshi.S",
+            "col": "Bikesh Magar & Devarshi.S",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Content Manager",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "dop": "Bikesh Magar",
+            "story": "\"Makhamali\" — named for the velvet marigold of Tihar garlands, a song about a love woven to last beyond seasons.",
+            "notes": [
+                "The Hulaki's second ChinoeTales video, moving from Arshu Shrestha (\"Bhagyamaani\") to Devarshi Sharma behind the camera."
+            ],
+            "seo": "The Hulaki Makhamali music video, Makhamali official video, makhamali song"
+        },
+        {
+            "t": "Mandainani Mana",
+            "a": "Ekdev Limbu",
+            "d": "Devarshi.S",
+            "y": "2025",
+            "id": "4ESj3_wpibA",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "col": "Bikesh Magar & Devarshi.S",
+            "credits": [
+                {
+                    "r": "Creative Director",
+                    "n": "Abhi Sampang Rai"
+                },
+                {
+                    "r": "Chief Assistant Director",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "VFX",
+                    "n": "Bikesh Magar"
+                }
+            ],
+            "story": "\"The heart won't listen\" — reason says move on, the heart refuses; a tug-of-war rendered in visual contrasts.",
+            "notes": [
+                "Back-to-back Ekdev Limbu releases two weeks apart, with Devarshi Sharma directing and co-coloring this one himself."
+            ],
+            "seo": "Ekdev Limbu Mandainani Mana music video, Mandainani Mana official video"
+        },
+        {
+            "t": "Maila Dai",
+            "a": "Abhijeet Khadgi",
+            "d": "Devarshi.S",
+            "y": "2024",
+            "id": "bqqtnsW-zXk",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Creative Director",
+                    "n": "Abhi Sampang Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "VFX",
+                    "n": "Saurav Shakya"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Aakash Poudel"
+                },
+                {
+                    "r": "Production Manager",
+                    "n": "Rushal Shrestha"
+                }
+            ],
+            "story": "\"Maila Dai\" — a character portrait of the middle brother, the one who carries the household quietly while nobody's watching.",
+            "notes": [
+                "Devarshi Sharma's first solo directing credit for the studio, backed by a full nine-person crew including VFX by Saurav Shakya."
+            ],
+            "seo": "Abhijeet Khadgi Maila Dai music video, Maila Dai official video"
+        },
+        {
+            "t": "Sisir",
+            "a": "Dibya Distry",
+            "d": "Devarshi.S",
+            "y": "2026",
+            "id": "dIrLADwvj4A",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/sisir.jpg",
+            "p": "Abhi Sampang Rai",
+            "e": "Devarshi.S & Bikesh Magar",
+            "col": "Devarshi.S & Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Graphics",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Winter\" — the season as a state of the heart; frost, breath, and the slow wait for a thaw.",
+            "notes": [
+                "Devarshi Sharma directing and co-editing/coloring his own cut, with Santosh Shah Thakuri on graphics."
+            ],
+            "seo": "Dibya Distry Sisir music video, Sisir official video"
+        },
+        {
+            "t": "Alvida",
+            "a": "Mohini",
+            "d": "Devarshi.S",
+            "y": "2025",
+            "id": "NTKAr2fsO4w",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/alvida.jpg",
+            "story": "\"Farewell\" — a goodbye told in stages: the packing, the last look back, the door closing, the after.",
+            "notes": [
+                "Kiwa Khimdung's first lead-DOP credit, with Devarshi Sharma directing and co-editing his own cut."
+            ],
+            "seo": "Mohini Alvida music video, Alvida official video, Nepali farewell song"
+        },
+        {
+            "t": "Ajambari Jhari",
+            "a": "Suvam Gurung",
+            "d": "Aakash Poudel",
+            "y": "2025",
+            "id": "HTYT_6jygJc",
+            "cat": "Music Video",
+            "story": "\"Everlasting rain\" — love as weather that never lets up, shot in a rain-soaked palette of greys and warm interiors.",
+            "notes": [
+                "The studio's first release with a companion BTS film — the start of the behind-the-scenes series that now accompanies most premieres."
+            ],
+            "seo": "Suvam Gurung Ajambari Jhari music video, Ajambari Jhari official video, Ajambari Jhari BTS"
+        },
+        {
+            "t": "Kura",
+            "a": "Freebirds",
+            "d": "Aakash Poudel",
+            "y": "2026",
+            "id": "o_vFurJR31E",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/kura.jpg",
+            "story": "\"Talk\" — the conversations we rehearse and never have; Freebirds return to the studio after \"Parichaya\".",
+            "notes": [
+                "_[Crew details not on file — confirm credits before publishing.]_ Directed by Aakash per the tracker; BTS film released May 13."
+            ],
+            "seo": "Freebirds Kura music video, Kura official video"
+        },
+        {
+            "t": "Maya Ko Sansaar",
+            "a": "Deeya Gurung",
+            "d": "Aakash Poudel",
+            "y": "2025",
+            "id": "fi_rRrrQWGQ",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/maya-ko-sansaar.jpg",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar & Aakash Poudel",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                }
+            ],
+            "story": "\"The world of love\" — an expansive romantic visual where love isn't a moment but an entire world you step into.",
+            "notes": [
+                "Aakash Poudel directing and co-editing, with Ongdi Moktan now in the lead art-direction seat he holds through 2026."
+            ],
+            "seo": "Deeya Gurung Maya Ko Sansaar music video, Maya Ko Sansaar official video"
+        },
+        {
+            "t": "Project Deepak",
+            "a": "Ramesh Uncle",
+            "d": "Aakash Poudel",
+            "y": "2025",
+            "id": "0p2C1QXdxMU",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/project-deepak.jpg",
+            "story": "A character-driven concept video built around \"Deepak\" — equal parts humor and heart, in Ramesh Uncle's off-kilter storytelling style.",
+            "notes": [
+                "A concept-heavy shoot with the full art department (both Rai sisters plus Ongdi Moktan) building the world around a single character."
+            ],
+            "seo": "Ramesh Uncle Project Deepak music video, Project Deepak official video"
+        },
+        {
+            "t": "Ekohoro Maya",
+            "a": "Chhewang Lama",
+            "d": "Aakash Poudel",
+            "y": "2024",
+            "id": "ulQHN-5SU-4",
+            "cat": "Music Video",
+            "story": "\"One-sided love\" — the loneliest kind of devotion, visualized from the point of view of the one who loves without reply.",
+            "notes": [
+                "Aakash Poudel's first directing credit with the studio, with Santosh Shah Thakuri contributing creative direction."
+            ],
+            "seo": "Chhewang Lama Ekohoro Maya music video, Ekohoro Maya official video"
+        },
+        {
+            "t": "Hulaki Dai",
+            "a": "Aman Basnet",
+            "d": "Arshu Shrestha",
+            "y": "2025",
+            "id": "_Rk1Sw7YDDI",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/hulaki-dai.jpg",
+            "p": "Abhi Sampang Rai",
+            "dop": "Kiwa Khimdung Rai",
+            "credits": [
+                {
+                    "r": "Creative Head",
+                    "n": "Bikesh Magar"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Behind Camera",
+                    "n": "Nichal Gurung"
+                },
+                {
+                    "r": "Project Supervisor",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Postman brother\" — a nostalgic ode to the hulaki who once carried every love letter and piece of news between villages, from an era before phones.",
+            "notes": [
+                "Arshu Shrestha's directorial debut for the studio (formerly of Kaagaz Productions), with Kiwa Khimdung stepping up as lead DOP."
+            ],
+            "seo": "Aman Basnet Hulaki Dai music video, Hulaki Dai official video, Nepali nostalgic song"
+        },
+        {
+            "t": "Sparsha",
+            "a": "Prabesh Thapa",
+            "d": "Santosh S. Thakuri",
+            "y": "2025",
+            "id": "J1vZsoG0pUk",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/sparsha.jpg",
+            "story": "\"Touch\" — a minimalist romance about the electricity of first contact; restraint as the whole point.",
+            "notes": [
+                "Santosh Shah Thakuri's directorial debut for the studio. _[Crew attribution ambiguous in source — verify before publishing.]_"
+            ],
+            "seo": "Prabesh Thapa Sparsha music video, Sparsha official video"
+        },
+        {
+            "t": "Timi Vaye Pugcha",
+            "a": "Rashik Aryal",
+            "d": "Santosh S. Thakuri",
+            "y": "2025",
+            "id": "jd6jS731EGY",
+            "cat": "Music Video",
+            "story": "\"You are enough\" — a stripped-back declaration that love doesn't need conditions; the video keeps the frame as uncluttered as the sentiment.",
+            "notes": [
+                "Released the same day as \"Sparsha\" — a double-premiere Friday for the studio, both directed by Santosh Shah Thakuri."
+            ],
+            "seo": "Rashik Aryal Timi Vaye Pugcha music video, Timi Vaye Pugcha official video"
+        },
+        {
+            "t": "Timro Muskan",
+            "a": "Ekdev Limbu",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "lq6DvP7j0Yg",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/timro-muskan.jpg",
+            "dop": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "e": "Bikesh Magar & Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai & Samasti Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Content Manager",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Your smile\" — the whole video orbits one image: the smile that rearranges someone's entire day.",
+            "notes": [
+                "First project with Aadi Pahari as dedicated project manager and Santosh Shah Thakuri in the new content-manager role — the studio's expanded 2025–26 production structure."
+            ],
+            "seo": "Ekdev Limbu Timro Muskan music video, Timro Muskan official video"
+        },
+        {
+            "t": "Maana Ko Haal",
+            "a": "Ekdev Limbu",
+            "d": "Abhi Sampang Rai",
+            "y": "2026",
+            "id": "dPZWY226Jno",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/maana-ko-haal.jpg",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "story": "\"The state of my heart\" — a status report from inside heartbreak, delivered with Ekdev Limbu's signature directness.",
+            "notes": [
+                "The fifth Ekdev Limbu collaboration — a deliberately intimate three-person crew after two large-format releases."
+            ],
+            "seo": "Ekdev Limbu Maana Ko Haal music video, Maana Ko Haal official video"
+        },
+        {
+            "t": "Fijeko Kesh",
+            "a": "Ekdev Limbu",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "JWI_ngCORdg",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Make-Up",
+                    "n": "Ismriti Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Devarshi.S"
+                },
+                {
+                    "r": "Camera Operator",
+                    "n": "Purushottam Kandel & Sobit Magar"
+                }
+            ],
+            "story": "\"Loosened hair\" — an intimate romantic portrait built around small, close details: hair falling loose, held glances, the private language of two people.",
+            "notes": [
+                "The start of the studio's long-running partnership with Ekdev Limbu — six ChinoeTales videos and counting. Bikesh Magar handled camera, edit, and color end to end."
+            ],
+            "seo": "Ekdev Limbu Fijeko Kesh music video, Fijeko Kesh official video, Ekdev Limbu new song"
+        },
+        {
+            "t": "Fijeko Kesh (Reimagined)",
+            "a": "Ekdev Limbu",
+            "d": "Abhi Sampang Rai",
+            "y": "2025",
+            "id": "e9_INHxOIzM",
+            "cat": "Music Video",
+            "story": "A reimagined visual for the song that started the Ekdev Limbu partnership — the same intimacy, rebuilt with a bigger palette and two more years of craft.",
+            "notes": [
+                "A rare \"reimagined\" release: the studio revisiting its own 2025 video with a fuller crew, dual editors, and a dedicated BTS unit."
+            ],
+            "seo": "Ekdev Limbu Fijeko Kesh Reimagined, Fijeko Kesh new version, Ekdev Limbu 2025"
+        },
+        {
+            "t": "Malai Hera",
+            "a": "Sabin Rai & The Pharaoh",
+            "d": "Abhi Sampang Rai",
+            "y": "2026",
+            "id": "lBMYIclXWNo",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar & Santosh S. Thakuri",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Arshu Shrestha"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai & Samasti Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai & Samasti Rai"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Production Manager",
+                    "n": "Rushal Shrestha"
+                },
+                {
+                    "r": "Assistant Production Manager",
+                    "n": "Asbin Rai & Arbind"
+                }
+            ],
+            "story": "\"Look at me\" — a commanding, soul-inflected demand for attention from one of Nepali rock's defining voices.",
+            "notes": [
+                "The studio's biggest crew on record — thirteen credited roles for Sabin Rai & The Pharaoh, including a dual production-management team."
+            ],
+            "seo": "Sabin Rai Malai Hera music video, Malai Hera official video, Sabin Rai The Pharaoh new song"
+        },
+        {
+            "t": "Dhun",
+            "a": "Rockheads",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "uXN6wT9Qz18",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Assistant Director",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "VFX",
+                    "n": "Saurav Shakya"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai & Samasti Rai"
+                }
+            ],
+            "story": "\"Melody\" — a tribute to the pull of music itself, blending band performance with VFX-driven visual flourishes.",
+            "notes": [
+                "The studio's first project with a dedicated VFX credit (Saurav Shakya), layered over Bikesh Magar's photography."
+            ],
+            "seo": "Rockheads Dhun music video, Dhun official video, Nepali rock music video VFX"
+        },
+        {
+            "t": "Hajar Janma",
+            "a": "Rockheads",
+            "d": "Abhi Sampang Rai",
+            "y": "2023",
+            "id": "m4Tj1EfRKlg",
+            "cat": "Music Video",
+            "e": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Co-Director",
+                    "n": "Abhi Sampang Rai"
+                },
+                {
+                    "r": "Production Manager",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "dop": "Saman Maharjan",
+            "story": "\"A thousand lifetimes\" — a rock ballad promising a love that outlasts a single life, matched with sweeping, performance-led visuals.",
+            "notes": [
+                "First of several collaborations with Rockheads. Bikesh Magar's first editing credit for the band, ahead of taking over as their go-to DOP."
+            ],
+            "seo": "Rockheads Hajar Janma music video, Hajar Janma official video, Nepali rock band video"
+        },
+        {
+            "t": "Rat Race",
+            "a": "Suski",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "waeHfil_BK0",
+            "cat": "Music Video",
+            "credits": [
+                {
+                    "r": "Cinematographer",
+                    "n": "Bikesh Magar"
+                },
+                {
+                    "r": "Make-Up & Stylist",
+                    "n": "Shristi Rai & Samasti Rai"
+                }
+            ],
+            "story": "The daily grind on loop — an urban visual about chasing a finish line that keeps moving, and the cost of never stepping off the track.",
+            "notes": [
+                "A tight four-person unit turning around a concept-driven video: direction, camera/edit, and a two-person styling team."
+            ],
+            "seo": "Suski Rat Race music video, Rat Race Nepali song, Nepali urban music video"
+        },
+        {
+            "t": "Parichaya",
+            "a": "Freebird",
+            "d": "Abhi Sampang Rai",
+            "y": "2023",
+            "id": "vRzjPbyc57g",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar & Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Cast",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                }
+            ],
+            "story": "\"Identity\" — a search for who you are when the labels come off, carried by Ongdi Moktan's on-screen performance.",
+            "notes": [
+                "Ongdi Moktan's first appearance as cast for the studio; he would go on to become a recurring face and later a regular art director."
+            ],
+            "seo": "Freebird Parichaya music video, Parichaya official video"
+        },
+        {
+            "t": "Fir Kabhi",
+            "a": "PUSHP",
+            "d": "Devarshi.S & Abhi Sampang Rai",
+            "y": "2023",
+            "id": "h0hnbIGl-qA",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar & Saman Maharjan",
+            "credits": [
+                {
+                    "r": "Assistant DOP",
+                    "n": "Purushottam Kandel & Sobit Magar"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Shristi Rai"
+                }
+            ],
+            "story": "\"Someday, again\" — a bittersweet goodbye that leaves the door open, told through parallel visuals of two lives drifting apart while the memory stays.",
+            "notes": [
+                "First co-direction between Abhi Sampang Rai and Devarshi Sharma, and Bikesh Magar's arrival as DOP — the pairing that defines the studio's later visual style."
+            ],
+            "seo": "PUSHP Fir Kabhi music video, Fir Kabhi official video, Nepali indie music video"
+        },
+        {
+            "t": "Parkha Hai Maya",
+            "a": "Saurab Tamang",
+            "d": "Abhi Sampang Rai",
+            "y": "2024",
+            "id": "Nhvp8WVgHN8",
+            "cat": "Music Video",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "dop": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Cast",
+                    "n": "Samasti Rai & Uttam Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Shristi Rai & Samasti Rai"
+                }
+            ],
+            "story": "\"Wait for me, love\" — a promise across distance, dramatized by on-screen couple Samasti Rai and Uttam Rai holding on through time apart.",
+            "notes": [
+                "An in-house cast production — art department leads Samasti Rai and Uttam Rai stepped in front of the camera while Bikesh Magar shot, edited, and colored."
+            ],
+            "seo": "Saurab Tamang Parkha Hai Maya music video, Parkha Hai Maya official video"
+        },
+        {
+            "t": "Auchau Vane",
+            "a": "George Gurung",
+            "d": "Abhi Sampang Rai",
+            "y": "2022",
+            "id": "zgJvKWZh7CI",
+            "cat": "Music Video",
+            "story": "\"If you'll come\" — an open-armed invitation to a hesitant love, staged as a slow-burning visual of waiting and hoping.",
+            "notes": [
+                "A lean, director-driven production — Abhi Sampang Rai carried the project as a compact one-person crew build."
+            ],
+            "seo": "George Gurung Auchau Vane music video, Auchau Vane official video"
+        },
+        {
+            "t": "Gorkhali Flo",
+            "a": "PGGH ft. Professor Trix",
+            "d": "Abhi Sampang Rai",
+            "y": "2022",
+            "id": "8aiJEU9gP_g",
+            "cat": "Music Video",
+            "p": "Shristi Rai",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Designer",
+                    "n": "Samasti Rai & Shristi Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai & Shristi Rai"
+                },
+                {
+                    "r": "Production Manager",
+                    "n": "Hebi Prajwol"
+                }
+            ],
+            "dop": "Saman Maharjan",
+            "story": "A Gorkhali pride anthem — hard-hitting hip-hop visuals that put Nepali identity, streetwear, and swagger front and center.",
+            "notes": [
+                "The studio's first hip-hop project, leaning on Samasti and Shristi Rai's styling and design work to give the video its distinct look."
+            ],
+            "seo": "PGGH Gorkhali Flo music video, Professor Trix Gorkhali Flo, Nepali hip hop music video"
+        },
+        {
+            "t": "Hereko Herei",
+            "a": "SickJam",
+            "d": "Abhi Sampang Rai",
+            "y": "2021",
+            "id": "yucIleOdT4M",
+            "cat": "Music Video",
+            "e": "Abhi Sampang Rai",
+            "col": "Abhi Sampang Rai & Samasti Rai",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Shristi Rai & Hebi Prajwol"
+                }
+            ],
+            "dop": "Saman Maharjan",
+            "story": "A song about the quiet ache of watching someone from a distance — the video follows that unspoken longing through everyday moments where a glance says everything words can't.",
+            "notes": [
+                "The studio's debut release. Directed and edited by Abhi Sampang Rai with Saman Maharjan behind the camera — the core crew that would anchor the next five years of ChinoeTales projects."
+            ],
+            "seo": "SickJam Hereko Herei music video, Hereko Herei official video, Nepali music video 2021"
+        },
+        {
+            "t": "Aafno Lagi",
+            "a": "Rabil Shrestha",
+            "d": "Shristi Rai",
+            "y": "2021",
+            "id": "2-7WilDZV9Y",
+            "cat": "Music Video",
+            "p": "Abhi Sampang Rai",
+            "e": "Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Saman Maharjan"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Hebi Prajwol"
+                },
+                {
+                    "r": "Designer",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "col": "Saman Maharjan",
+            "story": "\"For myself\" — a self-love anthem visualized as one person's decision to stop performing for others and reclaim their own time, space, and reflection.",
+            "notes": [
+                "Shristi Rai's directorial debut for the studio, with Abhi Sampang Rai stepping into the producer's chair and Samasti Rai handling art direction, design, and makeup in one."
+            ],
+            "seo": "Rabil Shrestha Aafno Lagi music video, Aafno Lagi official video, Nepali pop music video"
+        },
+        {
+            "t": "Niyaali Hera",
+            "a": "Swoopna Suman",
+            "d": "",
+            "y": "2024",
+            "id": "LaRqVQ467xo",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Cinematographer",
+                    "n": "Bikesh Magar"
+                }
+            ],
+            "story": "\"Look closely\" — an invitation to really see someone, shot as a soft, gaze-driven visual where the camera lingers the way the lyrics ask you to.",
+            "notes": [
+                "A single-crew production: Bikesh Magar shot, framed, and cut the entire video for one of Nepal's biggest pop voices."
+            ],
+            "seo": "Swoopna Suman Niyaali Hera music video, Niyaali Hera official video, Swoopna Suman new song"
+        },
+        {
+            "t": "Pagalpan",
+            "a": "Subani Moktan",
+            "d": "",
+            "y": "2024",
+            "id": "p7nkmtRdnto",
+            "cat": "Music Video",
+            "story": "\"Madness\" — love as beautiful irrationality, the kind that makes no sense on paper and perfect sense in person.",
+            "notes": [
+                "_[Crew details not on file — confirm credits before publishing.]_"
+            ],
+            "seo": "Subani Moktan Pagalpan music video, Pagalpan official video"
+        },
+        {
+            "t": "Timi Sangai",
+            "a": "Prabesh Kumar Shrestha",
+            "d": "",
+            "y": "2024",
+            "id": "WLZpjkvR5EQ",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Associate DOP",
+                    "n": "Purushottam Kandel"
+                }
+            ],
+            "story": "\"With you\" — a warm, uncomplicated love song about the ease of simply being beside the right person.",
+            "notes": [
+                "A compact two-person camera unit: Bikesh Magar on DOP and edit with Purushottam Kandel supporting."
+            ],
+            "seo": "Prabesh Kumar Shrestha Timi Sangai music video, Timi Sangai official video"
+        },
+        {
+            "t": "Jawaaf",
+            "a": "Diwas Gurung",
+            "d": "",
+            "y": "2024",
+            "id": "G9Oci6Xt2cg",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "story": "\"Answer\" — a song that sits inside an unanswered question, visualized as a restless wait for a reply that may never come.",
+            "notes": [
+                "A minimal two-person crew built around Bikesh Magar's full camera-to-color pipeline, for one of Nepali indie's most respected artists."
+            ],
+            "seo": "Diwas Gurung Jawaaf music video, Jawaaf official video, Diwas Gurung new song"
+        },
+        {
+            "t": "Tadha Tadha",
+            "a": "Wangden Sherpa ft. Prajina",
+            "d": "",
+            "y": "2024",
+            "id": "2112ZFrdZBk",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Creative Director",
+                    "n": "Abhi Sampang Rai"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                }
+            ],
+            "story": "\"Far, far away\" — a duet across distance, two voices and two frames slowly pulled apart by geography.",
+            "notes": [
+                "Stylist Bomi Rai's first project with the studio; she becomes the house stylist/MUA on most releases that follow."
+            ],
+            "seo": "Wangden Sherpa Tadha Tadha music video, Tadha Tadha official video, Prajina duet"
+        },
+        {
+            "t": "Timro Bolima",
+            "a": "Swoopna Suman & Jyotsna Yogi",
+            "d": "",
+            "y": "2024",
+            "id": "k4Bx9D5M6pQ",
+            "cat": "Music Video",
+            "story": "\"In your voice\" — a duet where each singer answers the other, staged as an intimate conversation in song.",
+            "notes": [
+                "Another full-pipeline Bikesh Magar production — DOP, cinematography, and edit in one pair of hands."
+            ],
+            "seo": "Swoopna Suman Timro Bolima music video, Timro Bolima official video, Jyotsna Yogi duet"
+        },
+        {
+            "t": "Hamro Maya",
+            "a": "The Edge Band",
+            "d": "",
+            "y": "2025",
+            "id": "NIY9w9glrGQ",
+            "cat": "Music Video",
+            "p": "Abhi Sampang Rai & Shristi Rai",
+            "e": "Bikesh Magar",
+            "col": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Assistant Cinematographer",
+                    "n": "Sobit Magar"
+                },
+                {
+                    "r": "VFX",
+                    "n": "Saurav Shakya"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Purushottam Kandel"
+                },
+                {
+                    "r": "Graphics",
+                    "n": "Santosh S. Thakuri"
+                }
+            ],
+            "story": "\"Our love\" — a long-running love story from one of Nepal's veteran bands, treated with an anniversary-portrait warmth.",
+            "notes": [
+                "An executive-produced project for legacy band The Edge, combining Saurav Shakya's VFX with Santosh Shah Thakuri's graphics work."
+            ],
+            "seo": "The Edge Hamro Maya music video, Hamro Maya official video, The Edge band Nepal"
+        },
+        {
+            "t": "Sahara",
+            "a": "Bipul Mahat",
+            "d": "",
+            "y": "2025",
+            "id": "jsSMgeXPaME",
+            "cat": "Music Video",
+            "story": "\"Support\" — a song of gratitude for the person who holds you up, from Australia-based artist Bipul Mahat.",
+            "notes": [
+                "A cross-border collaboration with an Australia-based artist; Shristi Rai anchored the production on the studio side."
+            ],
+            "seo": "Bipul Mahat Sahara music video, Sahara official video, Nepali artist Australia"
+        },
+        {
+            "t": "Parkhi Rahechu",
+            "a": "John Rai",
+            "d": "",
+            "y": "2025",
+            "id": "Ye8NxLnh8qE",
+            "cat": "Music Video",
+            "story": "\"I keep waiting\" — patience as an act of love; the video sits with the ache of a wait that has no end date.",
+            "notes": [
+                "John Rai's return after \"K Garu\", this time with Bikesh Magar running the full edit-VFX-color post pipeline."
+            ],
+            "seo": "John Rai Parkhi Rahechu music video, Parkhi Rahechu official video"
+        },
+        {
+            "t": "Bhariya Dai",
+            "a": "J Limbu",
+            "d": "",
+            "y": "2025",
+            "id": "dysQh-Ugyxc",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/bhariya-dai.jpg",
+            "story": "\"Porter brother\" — a tribute to Nepal's bhariyas, the load-carriers whose labor built the trails; dignity rendered in sweat and rope.",
+            "notes": [
+                "A socially rooted subject handled with a deliberately small footprint; Bikesh Magar credited on VFX."
+            ],
+            "seo": "J Limbu Bhariya Dai music video, Bhariya Dai official video, Nepali porter song"
+        },
+        {
+            "t": "Tihar Song",
+            "a": "Melonix",
+            "d": "",
+            "y": "2025",
+            "id": "i5Rc8l5C-jo",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/tihar-song.jpg",
+            "story": "A festival release timed to Tihar — lights, marigolds, and the warmth of the festival of brothers and sisters.",
+            "notes": [
+                "_[Crew details not on file — confirm credits before publishing.]_ Released the week before Tihar 2025."
+            ],
+            "seo": "Melonix Tihar Song music video, Tihar song 2025, Nepali festival song"
+        },
+        {
+            "t": "Prakriti",
+            "a": "Bipul Chettri",
+            "d": "Aakash Poudel",
+            "y": "2025",
+            "id": "chn_GHs_Hy8",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "e": "Bikesh Magar & Aakash Poudel",
+            "credits": [
+                {
+                    "r": "Assistant Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai & Shristi Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                }
+            ],
+            "story": "\"Nature\" — Bipul Chettri's Himalayan folk sensibility given a visual home in landscape, season, and stillness.",
+            "notes": [
+                "One of the studio's highest-profile artist collaborations to date — Bipul Chettri's cross-border folk audience spans Nepal, India, and the diaspora. Directed and co-edited by Aakash Pradhan."
+            ],
+            "seo": "Bipul Chettri Prakriti music video, Prakriti official video, Bipul Chettri new song 2025"
+        },
+        {
+            "t": "Angali Deu",
+            "a": "Subid Pun",
+            "d": "",
+            "y": "2026",
+            "id": "c-PPCC45WUc",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/angali-deu.jpg",
+            "p": "Abhi Sampang Rai",
+            "e": "Bikesh Magar & Abhi Sampang Rai",
+            "col": "Bikesh Magar & Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Cast",
+                    "n": "Ongdi Moktan"
+                }
+            ],
+            "story": "\"Embrace me\" — a plea for closeness carried by Ongdi Moktan's on-screen performance.",
+            "notes": [
+                "Ongdi Moktan returning to the cast role he began with in \"Parichaya\" — now one of the studio's most-featured faces."
+            ],
+            "seo": "Subid Pun Angali Deu music video, Angali Deu official video"
+        },
+        {
+            "t": "Samau Mero Haat",
+            "a": "Shuprim Magar",
+            "d": "Aakash Poudel",
+            "y": "2026",
+            "id": "aR8PwgXQvpA",
+            "cat": "Music Video",
+            "dop": "Kiwa Khimdung Rai",
+            "credits": [
+                {
+                    "r": "Art Direction",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                }
+            ],
+            "story": "\"Hold my hand\" — a simple gesture as the whole promise; a tender, close-quarters romance.",
+            "notes": [
+                "A four-person unit with Kiwa Khimdung as lead DOP and Aakash Pradhan directing."
+            ],
+            "seo": "Shuprim Samau Mero Haat music video, Samau Mero Haat official video"
+        },
+        {
+            "t": "Aama",
+            "a": "Kesang Tshering Sherpa",
+            "d": "",
+            "y": "2026",
+            "id": "vsp0NFB55rM",
+            "cat": "Music Video",
+            "dop": "Bikesh Magar",
+            "p": "Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Cinematographer",
+                    "n": "Prabin Gurung & Durga Singh Thakuri"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Ongdi Moktan"
+                },
+                {
+                    "r": "Production Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Assistant Production Manager",
+                    "n": "Arbind"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai"
+                }
+            ],
+            "story": "\"Mother\" — a tribute to the first and most enduring love; restrained, reverent, and built to make you call home.",
+            "notes": [
+                "New cinematographers Prabin Gurung and Durga Singh Thakuri joined the camera team for this release."
+            ],
+            "seo": "Kesang Tshering Sherpa Aama music video, Aama official video, Nepali mother song"
+        },
+        {
+            "t": "Ghara Ko Kancho Choro",
+            "a": "Samir Shrestha",
+            "d": "Aakash Poudel",
+            "y": "2025",
+            "id": "giRSESKZHrg",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/ghara-ko-kancho-choro.jpg",
+            "story": "\"The youngest son of the house\" — a wry, affectionate portrait of the family's kancho: babied, underestimated, and quietly determined to prove everyone wrong.",
+            "notes": [
+                "Aakash Poudel directing under Abhi Sampang Rai's executive production — the mentorship structure the studio uses to develop new directors."
+            ],
+            "seo": "Samir Shrestha Ghara Ko Kancho Choro music video, Kancho Choro official video"
+        },
+        {
+            "t": "Jay Mahakali",
+            "a": "Balen Shah",
+            "d": "",
+            "y": "2025",
+            "id": "Yse0H0mXEuQ",
+            "e": "Bikesh Magar",
+            "cat": "Music Video"
+        },
+        {
+            "t": "Maya Ko Aago",
+            "a": "Rockheads",
+            "d": "Abhi Sampang Rai",
+            "y": "2026",
+            "id": "WstiluYoJ7U",
+            "cat": "Music Video",
+            "keyart": "assets/img/posters/maya-ko-aago.jpg",
+            "dop": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "Creative Director",
+                    "n": "Devarshi.S"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Aakash Poudel"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai & Ongdi Moktan"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Prabin Gurung & Durga Singh Thakuri"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Hair",
+                    "n": "Samasti Rai"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai"
+                },
+                {
+                    "r": "Content Manager",
+                    "n": "Santosh S. Thakuri & Dipika Rai"
+                }
+            ],
+            "story": "\"The fire of love\" — Rockheads' third ChinoeTales video burns hotter: love as something that warms and consumes at once.",
+            "notes": [
+                "The longest-running band relationship in the catalogue (\"Hajar Janma\", \"Dhun\", now this) — with new crew additions Nurja Rai (styling) and Dipika Rai (content)."
+            ],
+            "seo": "Rockheads Maya ko Aago music video, Maya ko Aago official video"
+        },
+        {
+            "t": "Kherai Jane Maya",
+            "a": "Keher Limbo",
+            "d": "Devarshi.S",
+            "cat": "Music Video",
+            "y": "2026",
+            "id": "a_TAnqNru0Q",
+            "keyart": "assets/img/posters/kherai-jane-maya.jpg",
+            "dop": "Bikesh Magar",
+            "p": "Abhi Sampang Rai",
+            "credits": [
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Assistant Director",
+                    "n": "Swornima Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai & Ongdi Moktan"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Bomi Rai & Samasti Rai"
+                },
+                {
+                    "r": "Make-Up",
+                    "n": "Bomi Rai & Samasti Rai"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Arbind"
+                }
+            ],
+            "story": "\"Love gone to waste\" — grieving a love that was spent on the wrong person, shot with more anger than tears.",
+            "notes": [
+                "Swornima Rai's first assistant-director credit with the studio, under Devarshi Sharma's direction."
+            ],
+            "seo": "Keher Limbo Kherai Jane Maya music video, Kherai Jane Maya official video"
+        },
+        {
+            "t": "Jhut",
+            "a": "Tala Anjum & Bibash JK",
+            "d": "Bikesh Magar",
+            "cat": "Music Video",
+            "y": "2026",
+            "id": "eAyCZsMFKhM",
+            "e": "Bikesh Magar",
+            "credits": [
+                {
+                    "r": "VFX",
+                    "n": "Bikesh Magar"
+                },
+                {
+                    "r": "Creative Director",
+                    "n": "Abhi Sampang Rai & Devarshi.S"
+                },
+                {
+                    "r": "Creative Head",
+                    "n": "Santosh S. Thakuri"
+                },
+                {
+                    "r": "Cinematographer",
+                    "n": "Kiwa Khimdung Rai"
+                },
+                {
+                    "r": "Art Direction",
+                    "n": "Shristi Rai & Ongdi Moktan"
+                },
+                {
+                    "r": "DIT",
+                    "n": "Arbind"
+                },
+                {
+                    "r": "Project Manager",
+                    "n": "Aadi Pahari"
+                },
+                {
+                    "r": "Stylist",
+                    "n": "Samasti Rai & Bomi Rai"
+                }
+            ],
+            "story": "\"Lie\" — a collaboration between Tala Anjum and Bibash JK that pulls apart a relationship built on one; the truth arrives frame by frame.",
+            "notes": [
+                "The studio's most recent release — a dual-creative-director structure (Abhi and Devarshi) with Santosh Shah Thakuri as creative head."
+            ],
+            "seo": "Tala Anjum Jhut music video, Bibash JK Jhoot official video"
+        }
+    ],
+    "projects": [
+        {
+            "t": "Ajambari Jhari",
+            "slug": "ahjambari-jhari"
+        },
+        {
+            "t": "Alvida",
+            "slug": "alvida"
+        },
+        {
+            "t": "Bhagyamaani",
+            "slug": "bhayemani"
+        },
+        {
+            "t": "Dhun",
+            "slug": "dhun"
+        },
+        {
+            "t": "Fijeko Kesh",
+            "slug": "fijeko-kesh"
+        },
+        {
+            "t": "Fir Kabhi",
+            "slug": "fir-khabi"
+        },
+        {
+            "t": "Ghara Ko Kancho Choro",
+            "slug": "ghara-ko-kancho-choro"
+        },
+        {
+            "t": "Hajar Janma",
+            "slug": "hajar-janma"
+        },
+        {
+            "t": "Hamro Maya",
+            "slug": "hamro-maya"
+        },
+        {
+            "t": "Hereko Herei",
+            "slug": "hereko-herai"
+        },
+        {
+            "t": "Hey Sailaa",
+            "slug": "hey-sailaa"
+        },
+        {
+            "t": "Jay Mahakali",
+            "slug": "jay-mahakali"
+        },
+        {
+            "t": "Jhim Jhimaune Aankha",
+            "slug": "jhim-jhimaune-aakha"
+        },
+        {
+            "t": "K Garu",
+            "slug": "k-garu"
+        },
+        {
+            "t": "Laijau Malai",
+            "slug": "laijaw-malai"
+        },
+        {
+            "t": "Ma Mare Pani",
+            "slug": "ma-mare-pani"
+        },
+        {
+            "t": "Maila Dai",
+            "slug": "maila-dai"
+        },
+        {
+            "t": "Makhamali",
+            "slug": "makhamali"
+        },
+        {
+            "t": "Maana Ko Haal",
+            "slug": "mana-ko-haal"
+        },
+        {
+            "t": "Mandainani Mana",
+            "slug": "mandaina-ni-mana"
+        },
+        {
+            "t": "Maya Ko Aago",
+            "slug": "maya-ko-aago"
+        },
+        {
+            "t": "Maya Ma",
+            "slug": "maya-ma"
+        },
+        {
+            "t": "Nindra Ma",
+            "slug": "nindra-ma"
+        },
+        {
+            "t": "Parichaya",
+            "slug": "parichaya"
+        },
+        {
+            "t": "Sahara",
+            "slug": "sahara"
+        },
+        {
+            "t": "Samau Mero Haat",
+            "slug": "samau-mero-haat"
+        },
+        {
+            "t": "Sisir",
+            "slug": "shisir"
+        },
+        {
+            "t": "Soltini",
+            "slug": "soltini"
+        },
+        {
+            "t": "Sparsha Sangeet",
+            "slug": "sparsha-sangeet"
+        },
+        {
+            "t": "Auchau Vane",
+            "slug": "timi-aauchau-vane"
+        }
+    ],
+    "faq": [
+        {
+            "q": "What does Chinoétales Productions do?",
+            "n": "We are a story-driven film studio based in Kathmandu. We direct, shoot, and edit music videos, commercials, documentaries and visual narratives — from the first treatment through to the final grade."
+        },
+        {
+            "q": "How many people are on the team?",
+            "n": "Thirteen. Direction, cinematography, production design, art direction, editing, styling and the operations that hold it all together are all in-house, and we work with a regular circle of collaborators beyond that."
+        },
+        {
+            "q": "How many films have you made?",
+            "n": "Over 100 music videos released since 2021, for more than 50 artists and bands."
+        },
+        {
+            "q": "Do you work outside Kathmandu?",
+            "n": "Yes. We are based in Kathmandu and available for projects anywhere — shoots have taken us across Nepal, and we take on international work."
+        },
+        {
+            "q": "What does a project usually involve?",
+            "n": "Most begin with a conversation about the song and what it should feel like. From there we build the treatment, assemble the crew, shoot, and deliver the finished film — including the behind-the-scenes cut where the project calls for one."
+        },
+        {
+            "q": "How do I start a project with you?",
+            "n": "Send us the track and a note about what you have in mind through the contact page. Tell us your timeline and any references, and we will come back to you — we typically respond within 48 hours."
+        }
+    ]
+}

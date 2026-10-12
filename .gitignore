@@ -1,0 +1,20 @@
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# macOS
+.DS_Store
+._*
+
+# Local IDE & Environment Configs
+launch.json
+settings.local.json
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+

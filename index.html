@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinoé Tales Production</title>
+  <meta name="description"
+    content="Chinoétales Productions, a Nepal-based, story-driven film studio creating cinematic music videos and visual narratives. Team Chinoé, 13 people, 100+ films, one love for cinema.">
+  <link rel="canonical" href="https://chinoetales.com/">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chinoétales Productions">
+  <meta property="og:title" content="Chinoétales Productions — Story-Driven Cinema from Nepal">
+  <meta property="og:description"
+    content="A Nepal-based film studio creating cinematic music videos and visual narratives. 100+ films, 50+ artists.">
+  <meta property="og:image" content="img/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://chinoetales.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chinoétales Productions — Story-Driven Cinema from Nepal">
+  <meta name="twitter:description"
+    content="A Nepal-based film studio creating cinematic music videos and visual narratives.">
+  <meta name="twitter:image" content="img/social-card.jpg">
+
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preconnect" href="https://jfwynwnqeilaqtbgiuqc.supabase.co" crossorigin>
+  <link rel="dns-prefetch" href="https://jfwynwnqeilaqtbgiuqc.supabase.co">
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="assets/zb.css">
+  <link rel="stylesheet" href="assets/pages.css">
+</head>
+
+<body class="home-active">
+
+  <div id="intro"><video id="introVid" data-cms-src="assets.intro" src="video/intro.mp4" muted playsinline
+      preload="auto" aria-hidden="true"></video></div>
+
+  <div class="page-fade-top" aria-hidden="true"></div>
+  <div class="page-fade" id="pageFade" aria-hidden="true"></div>
+  <div class="frame-copy" id="frameCopy">© 2026 Chinoétales Films Pvt. Ltd.</div>
+
+  <section class="page active" id="home">
+    <!-- CMS bridge: applyAssets() writes assets.heroLogo here and zb.js reads it back for the landing wordmark. -->
+    <img id="heroLogo" src="img/wordmark-white.png" alt="Chinoé Tales Production" hidden>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal proj-modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose">Close ✕</button>
+    <div class="modal-box proj-box">
+      <div class="frame16 proj-stage">
+        <img id="projPoster" alt="" decoding="async">
+        <button class="proj-play" id="projPlay" type="button" aria-label="Play film" hidden></button>
+        <div class="proj-player" id="projPlayer"></div>
+      </div>
+      <div class="proj-head" id="projHead">
+        <figure class="proj-keyart" id="projKeyart">
+          <img id="projKeyartImg" alt="" decoding="async">
+        </figure>
+        <div class="proj-head-text">
+          <p class="proj-cat" id="projCat"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalArtist"></p>
+          <a class="modal-yt" id="modalYt" target="_blank" rel="noopener" aria-label="Watch on YouTube"><svg class="yt-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>Watch on YouTube</span></a>
+          <p class="proj-story" id="projStory"></p>
+        </div>
+      </div>
+      <div class="proj-detail">
+        <blockquote class="proj-quote" id="projQuote">
+          <p id="projQuoteText"></p><cite id="projQuoteWho"></cite>
+        </blockquote>
+        <div class="proj-block" id="projCreditsBlock">
+          <p class="proj-sub">Production Credits</p>
+          <dl class="proj-credits" id="projCredits"></dl>
+        </div>
+        <div class="proj-block" id="projBtsBlock">
+          <p class="proj-sub">Behind the Scenes</p>
+          <div class="frame16 proj-stage bts">
+            <img id="btsPoster" alt="" decoding="async">
+            <button class="proj-play" id="btsPlay" type="button" aria-label="Play behind the scenes"></button>
+            <div class="proj-player" id="btsPlayer"></div>
+          </div>
+        </div>
+        <div class="proj-block" id="projNotesBlock">
+          <p class="proj-sub">Production Notes</p>
+          <div class="proj-notes" id="projNotes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Team Director Modal -->
+  <div class="modal dir-modal" id="dirModal" role="dialog" aria-modal="true" aria-labelledby="dirMName">
+    <button class="modal-close" id="dirClose" aria-label="Close profile">Close ✕</button>
+    <div class="dir-modal-box">
+      <div class="dir-avatar" id="dirMAvatar"></div>
+      <div class="dir-modal-body">
+        <h3 id="dirMName"></h3>
+        <p class="dir-role" id="dirMRole"></p>
+        <p class="dir-about" id="dirMAbout"></p>
+        <p class="dir-sub" id="dirMWorksLabel">Notable Works</p>
+        <ul class="dir-works" id="dirMWorks"></ul>
+        <p class="dir-statement" id="dirMQ"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/lib/supabase.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/zb.js"></script>
+</body>
+
+</html>

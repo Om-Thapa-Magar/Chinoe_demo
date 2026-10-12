@@ -1,0 +1,237 @@
+/* ===================================================================
+   CHINOÉTALES — landing, structured after the Zauberberg reference.
+   Virtual-scroll project list: two stacked copies of the list translate
+   together; the back copy is dimmed + edge-masked, the front copy is
+   clipped to a band at the exact vertical centre, so whichever project
+   crosses centre reads as solid white = active.
+   Type is Special Elite (Apache 2.0), a typewriter face — a deliberate
+   departure from the reference's TWK Lausanne, which is commercial anyway.
+   =================================================================== */
+
+:root{
+  /* the row must always be a touch taller than the band, so the band only ever
+     frames one project — keep the 2px difference if you retune these */
+  --zb-row:26px;        /* one project row */
+  --zb-band:24px;       /* the centred highlight band */
+  --zb-size:18px;       /* project names */
+  --zb-nav-size:15px;   /* corner nav */
+  --zb-lh:1.1;
+}
+
+/* ---------- the landing owns the viewport; it never natively scrolls ---------- */
+body.zb-home{overflow:hidden;overscroll-behavior:none}
+#home.zb{position:relative;height:100dvh;min-height:100dvh;overflow:hidden;background:#000;touch-action:none}
+
+/* ---------- background media ---------- */
+.zb-bg{position:absolute;inset:0;z-index:0;background:#000}
+.zb-layer{position:absolute;inset:0;opacity:0;transition:opacity .9s cubic-bezier(.4,0,.2,1)}
+.zb-layer.on{opacity:1}
+.zb-layer video,.zb-layer img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.zb-layer img{animation:zbKen 18s ease-out forwards}
+@keyframes zbKen{from{transform:scale(1.04)}to{transform:scale(1.14)}}
+/* keeps the white type legible over any frame */
+.zb-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.18) 30%,rgba(0,0,0,.18) 70%,rgba(0,0,0,.5))}
+
+/* ---------- chrome ---------- */
+/* logo: top centre, with cinematic optical sizing and ambient drop-shadow */
+.zb-logo{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:25;
+  width:auto;max-width:min(230px,50vw);display:flex;justify-content:center;align-items:center;
+  transition:transform .35s var(--ease),opacity .35s var(--ease);
+  will-change:transform,opacity}
+.zb-logo:hover{opacity:1;transform:translateX(-50%) scale(1.02)}
+.zb-logo.scroll-hidden,
+body.hero-scroll-hidden .zb-logo{
+  opacity:0!important;
+  transform:translateX(-50%) translateY(-28px)!important;
+  pointer-events:none!important}
+.zb-logo img{height:auto;max-height:46px;width:100%;max-width:100%;display:block;object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.75)) drop-shadow(0 6px 20px rgba(0,0,0,.45));
+  transition:filter .35s var(--ease)}
+.zb-logo:hover img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.9)) drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+/* nav: one link pinned to each corner. The wrapper is display:contents so it
+   adds no box of its own — each link is positioned individually. (display:none
+   on the wrapper still hides them all on smaller screens, fixed or not.) */
+.zb-nav{display:contents}
+.zb-nav a{position:fixed;z-index:60;
+  font-family:var(--font);font-size:var(--zb-nav-size);font-weight:400;color:#fff;
+  line-height:var(--zb-lh);opacity:.5;
+  transition:opacity .35s var(--ease),color .35s var(--ease)}
+.zb-nav a:hover,.zb-nav a.on{opacity:1}
+/* The indicator is the type itself — no underline, no block. Links sit dimmed
+   and lift to solid white when hovered or active, exactly how the project list
+   below marks its centred row. One mechanism for "where am I" on every device. */
+.zb-nav a[data-route="home"]   {top:34px;    left:38px}
+.zb-nav a[data-route="work"]   {bottom:34px; left:38px}
+.zb-nav a[data-route="team"]   {top:34px;    right:38px}
+.zb-nav a[data-route="contact"]{bottom:34px; right:38px}
+/* ---------- burger (tablet + phone) ---------- */
+/* On smaller screens the inline nav becomes a burger pinned to the middle of
+   the right edge, and the logo mirrors it on the middle left. */
+/* the box stays 44px for the touch target; only the dots got smaller */
+.zb-burger{position:fixed;top:18px;right:18px;z-index:30;
+  width:44px;height:44px;display:none;align-items:center;justify-content:center;
+  flex-direction:column;gap:4px;background:none;border:0;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+/* kebab: three vertical dots. On open the outer dots stretch into bars and
+   cross at the middle dot's position — dot 4px + 6px gap = centres 10px apart,
+   hence the ±10px travel. */
+.zb-burger span{display:block;width:3px;height:3px;border-radius:50%;background:#fff;
+  transition:transform .45s var(--ease),opacity .3s var(--ease),
+             width .45s var(--ease),height .45s var(--ease),
+             border-radius .45s var(--ease)}
+/* hover: the dots fan apart and brighten — a small "this is a control" tell.
+   Skipped while the menu is open so it cannot fight the X transform. */
+body:not(.zb-menu-open) .zb-burger:hover span:nth-child(1),
+body:not(.zb-menu-open) .zb-burger:focus-visible span:nth-child(1){transform:translateY(-2px)}
+body:not(.zb-menu-open) .zb-burger:hover span:nth-child(3),
+body:not(.zb-menu-open) .zb-burger:focus-visible span:nth-child(3){transform:translateY(2px)}
+body:not(.zb-menu-open) .zb-burger:hover span:nth-child(2),
+body:not(.zb-menu-open) .zb-burger:focus-visible span:nth-child(2){transform:scale(1.35)}
+/* dot 3px + 4px gap = centres 7px apart, so the outer dots travel 7px to meet
+   the middle one and cross there */
+body.zb-menu-open .zb-burger span:nth-child(1){width:18px;height:1.5px;border-radius:1px;
+  transform:translateY(7px) rotate(45deg)}
+body.zb-menu-open .zb-burger span:nth-child(2){opacity:0}
+body.zb-menu-open .zb-burger span:nth-child(3){width:18px;height:1.5px;border-radius:1px;
+  transform:translateY(-7px) rotate(-45deg)}
+@media(prefers-reduced-motion:reduce){
+  .zb-burger span{transition:opacity .2s}
+  body:not(.zb-menu-open) .zb-burger:hover span{transform:none}
+}
+
+/* The panel is wiped open from the burger itself rather than cross-faded, so
+   the menu reads as growing out of the button — one continuous gesture.
+   --ox/--oy track the burger, and are kept in sync on resize. */
+.zb-menu{position:fixed;inset:0;z-index:29;background:rgba(0,0,0,.94);
+  --ox:calc(100% - 40px); --oy:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  visibility:hidden;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  clip-path:circle(0px at var(--ox) var(--oy));
+  transition:clip-path .62s cubic-bezier(.76,0,.24,1),visibility .62s}
+body.zb-menu-open .zb-menu{visibility:visible;clip-path:circle(150% at var(--ox) var(--oy))}
+/* The menu only ever renders at 1024px and under, so this clamp IS the tablet
+   and phone size — 15px on tablet, 13px on phone. It was 16-19px, authored
+   before the type scale came down and left sitting well above body copy. */
+.zb-menu a{font-family:var(--font);font-size:clamp(13px,2.6vw,15px);font-weight:400;
+  color:rgba(255,255,255,.5);
+  padding:13px 8px;opacity:0;transform:translateX(18px);
+  transition:opacity .42s var(--ease),transform .42s var(--ease),color .35s var(--ease)}
+/* colour, not opacity: the open/close animation already drives opacity here.
+   Scoped to the base rule rather than .zb-menu-open so the dim/solid state is
+   the same whether the panel is open or not. */
+.zb-menu a:hover,.zb-menu a.on{color:#fff}
+body.zb-menu-open .zb-menu a{opacity:1;transform:none}
+/* links arrive just behind the wipe */
+body.zb-menu-open .zb-menu a:nth-child(1){transition-delay:.20s}
+body.zb-menu-open .zb-menu a:nth-child(2){transition-delay:.27s}
+body.zb-menu-open .zb-menu a:nth-child(3){transition-delay:.34s}
+body.zb-menu-open .zb-menu a:nth-child(4){transition-delay:.41s}
+
+@media(prefers-reduced-motion:reduce){
+  .zb-menu{transition:visibility .2s;clip-path:none;opacity:0}
+  body.zb-menu-open .zb-menu{opacity:1}
+  .zb-menu a{transition:none;opacity:1;transform:none}
+}
+
+@media(max-width:1024px){
+  .zb-nav{display:none}
+  .zb-burger{display:flex}   /* burger sits top-right */
+  body.zb-menu-open{overflow:hidden}
+}
+@media(max-width:760px){
+  .zb-burger{right:14px}
+  .zb-logo{top:12px;max-width:min(170px,44vw)}
+  .zb-logo img{max-height:36px}
+}
+
+/* ---------- the list ---------- */
+/* perspective origin sits on the viewport centre — the same point the band
+   clips — so the 3D tilt never moves the active row off centre */
+.zb-stage{position:absolute;inset:0;z-index:2;display:block;
+  perspective:1000px;perspective-origin:50% 50%}
+
+/* back copy: full height, dimmed, faded at both edges */
+/* the top fade starts below the logo so names never collide with it */
+/* The mask stops are variables so JS can balance them against the *measured*
+   logo and meta positions on tablet/phone — fixed px could not know how tall
+   the logo renders, which left a 59px gap up top against 31px at the bottom.
+   Desktop keeps the original hand-tuned values. */
+.zb-dim{position:absolute;inset:0;z-index:1;transform-origin:50% 50%;will-change:transform;
+  --mt0:168px; --mt1:275px; --mb1:calc(100% - 150px); --mb0:calc(100% - 60px);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,transparent var(--mt0),#000 var(--mt1),#000 var(--mb1),transparent var(--mb0),transparent);
+          mask-image:linear-gradient(to bottom,transparent,transparent var(--mt0),#000 var(--mt1),#000 var(--mb1),transparent var(--mb0),transparent)}
+/* front copy: clipped to a band at dead centre -> that row reads solid white.
+   It stays hidden while the list moves (two half-rows would both glow) and
+   fades in only once the motion has stopped. */
+.zb-band{position:absolute;top:50%;left:0;right:0;height:var(--zb-band);
+  transform:translateY(-50%);z-index:2;overflow:hidden;pointer-events:none;
+  opacity:0;transition:opacity .3s ease}
+.zb-band.idle{opacity:1}
+
+.zb-list{position:absolute;top:0;left:0;right:0;display:flex;flex-direction:column;align-items:center;
+  will-change:transform}
+.zb-band .zb-list{top:0}
+.zb-row{height:var(--zb-row);display:flex;align-items:center;justify-content:center;width:100%}
+/* the anchor fills the row so the whole band is tappable, not just the glyphs */
+.zb-row a{display:flex;align-items:center;justify-content:center;height:100%;
+  font-family:var(--font);font-size:var(--zb-size);font-weight:400;line-height:var(--zb-lh);
+  color:#fff;white-space:nowrap;letter-spacing:.01em;text-align:center;padding:0 12px}
+
+/* the dimmed copy sits back; the band copy is full white on top */
+.zb-dim .zb-row a{opacity:.42;
+  transition:opacity .3s,transform .28s cubic-bezier(.34,1.56,.64,1),color .3s}
+.zb-band .zb-row a{opacity:1;transition:transform .28s cubic-bezier(.34,1.56,.64,1)}
+
+/* hover: white highlight + subtle pop, NO scrolling */
+.zb-dim .zb-row.hover a{opacity:1;color:#fff;transform:scale(1.09)}
+.zb-band .zb-row.hover a{transform:scale(1.09)}
+
+/* click: the row glides to centre (JS lerp) while the background list tilts
+   back in 3D and springs flat again — the parallax depth cue. The tilt lives
+   on the .zb-dim PARENT, so it never fights the per-frame translate on its
+   inner .zb-list. */
+.zb-dim{transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.zb-stage.tilt .zb-dim{transform:rotateX(8deg) scale(.97)}
+.zb-row a{cursor:pointer}
+
+/* Three tiers, and the first one matters: the burger replaces the corner nav at
+   1024px, but the list used to keep its DESKTOP row and type all the way down to
+   760px. Every tablet therefore ran desktop metrics under a mobile nav, which is
+   what made the list sit wrong on tablet. The type break now matches the nav
+   break. Keep row exactly 2px over band in every tier. */
+@media(max-width:1024px){
+  :root{--zb-row:27px;--zb-band:25px;--zb-size:16.5px;--zb-nav-size:14px}
+}
+/* the phone gets the tallest rows of the three: it is the only touch target,
+   and at 19px the names were nearly impossible to hit while scrolling */
+@media(max-width:760px){
+  :root{--zb-row:31px;--zb-band:29px;--zb-size:14.5px;--zb-nav-size:13px}
+}
+
+/* ---------- meta line under the band (active project detail) ---------- */
+/* lifted off the bottom edge toward centre; the list's bottom fade anchors to
+   this element's measured top, so balanceMask absorbs the move automatically */
+.zb-meta{position:fixed;left:0;right:0;bottom:52px;z-index:20;text-align:center;
+  font-family:var(--font);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);pointer-events:none;
+  opacity:0;transition:opacity .45s}
+.zb-meta.on{opacity:1}
+@media(max-width:760px){.zb-meta{bottom:34px;font-size:8px}}
+
+
+/* ---------- retire the old cinematic hero layers on the landing ---------- */
+#home.zb .hero,
+#home.zb .hero-slate,#home.zb .hero-tag,#home.zb .hero-scroll,
+#home.zb .hero-props,#home.zb .hero-beams,#home.zb #heroFX,
+#home.zb .hero-lensring,#home.zb .hero-grain,#home.zb .hero-scan,#home.zb .hero-vig,
+#home.zb .hero-aperture{display:none!important}
+/* the landing supplies its own chrome, so hide the global frame bits there */
+body.zb-home .frame-copy,body.zb-home .nav-item,body.zb-home .burger,
+body.zb-home .frame-logo,body.zb-home .page-fade,body.zb-home .page-fade-top{display:none!important}
+
+@media(prefers-reduced-motion:reduce){
+  .zb-layer img{animation:none}
+  .zb-layer{transition:none}
+}

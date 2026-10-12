@@ -1,0 +1,706 @@
+/* ===================================================================
+   CHINOÉTALES — inner pages (Our Work / Our Team / Contact / About /
+   Services) restyled to the landing's theme: black ground, cream
+   Special Elite typewriter type, centred, minimal.
+
+   Rather than swap --white/--black (which would invert the sections that
+   are *meant* to be dark), we flip .lpage explicitly and redefine only
+   the two variables whose meaning genuinely changes on a dark ground:
+   --line-l (a rule drawn on light) and --grey (muted text on light).
+   =================================================================== */
+
+.lpage{
+  background:#000;
+  color:var(--white);
+  --line-l:rgba(255,254,238,.15);   /* rules are now light-on-dark */
+  --grey:#8c8c8c;                   /* muted copy needs to lift off black */
+}
+
+/* ---------- surfaces that were painted cream ---------- */
+.lpage .value{background:#000}
+.lpage .value:hover{background:#0e0e0c}
+.lpage .process .step{background:#000}
+
+/* ---------- inline emphasis that was set in ink ---------- */
+.lpage .dir-works li b,
+.lpage .marquee span b{color:var(--white)}
+
+/* ---------- the team accordion ---------- */
+.lpage .dir-avatar{border:1px solid rgba(255,254,238,.12)}
+
+/* Monogram plates are placeholders until real headshots land. At the original
+   #1a1a1a -> #000 they sat within a few points of the page background: fine as a
+   single avatar inside an expanded accordion panel, but a grid of thirteen read
+   as a black void. Lifted the plate, border and monogram so the grid has
+   structure without pretending to be a photograph. */
+#team .dir-avatar{background:linear-gradient(150deg,#2b2b28,#0d0d0c);
+  border-color:rgba(255,254,238,.18)}
+#team .dir-avatar span{color:rgba(255,254,238,.30)}
+#team .dir-avatar::after{color:rgba(255,254,238,.62)}
+#team .dir-card:hover .dir-avatar,
+#team .dir-card:focus-visible .dir-avatar{border-color:rgba(255,254,238,.40)}
+.dir-modal .dir-avatar{background:linear-gradient(150deg,#2b2b28,#0d0d0c)}
+.dir-modal .dir-avatar span{color:rgba(255,254,238,.30)}
+.dir-modal .dir-avatar::after{color:rgba(255,254,238,.62)}
+.lpage .dir-statement{border-left-color:rgba(255,254,238,.22)}
+
+/* ---------- catalogue controls ---------- */
+.lpage .search{color:var(--white)}
+.lpage .search::placeholder{color:rgba(255,254,238,.35)}
+.lpage .search:focus{border-color:var(--white)}
+.lpage .filter:hover{color:var(--white);border-color:rgba(255,254,238,.5)}
+.lpage .filter.on{background:var(--white);color:#000;border-color:var(--white)}
+
+/* ---------- contact form ---------- */
+.lpage .cform input,
+.lpage .cform select,
+.lpage .cform textarea{color:var(--white)}
+.lpage .cform input::placeholder,
+.lpage .cform textarea::placeholder{color:rgba(255,254,238,.3)}
+.lpage .cform input:focus,
+.lpage .cform select:focus,
+.lpage .cform textarea:focus{border-color:var(--white)}
+.lpage .cform select option{background:#0a0a0a;color:#fffeee}
+.lpage .csend{background:var(--white);color:#000}
+.lpage .csend:hover{opacity:.85}
+.lpage .csend.ok{background:#2e6b3e;color:#fff}
+
+/* Bottom clearance for the fixed chrome.
+   The scrim + credit line own the last ~22vh of the viewport. Without this the
+   final element of a page comes to rest inside the fade at max scroll — on
+   Contact that was the Send button, the page's one call to action, sitting
+   permanently dimmed. Reserving the fade's own height pushes it clear.
+   #work sets its own clearance further down, on the rule that already owns the
+   grid's padding — declaring it here too would lose to that later rule. */
+#contact .contact-inner,
+#team .dir-carousel{padding-bottom:clamp(150px,22vh,230px)}
+
+/* the dark band already sits on black — give it an edge so it reads as a plate */
+.lpage .dark-band{border-block:1px solid rgba(255,254,238,.10)}
+
+/* ---------- edge gradients: both ends fade to TRANSPARENT ----------
+   They no longer end in solid black — that would have blanked out the Our Work
+   backdrop video. They are soft scrims that let the footage read through, and
+   they sit at z-index 5: above the page content, but below the corner nav
+   (z 60), which the old z-index 40 was painting straight over.
+
+   The tail is deliberately steep. The credit line and the corner nav are FIXED,
+   so scrolling copy passes directly beneath them; at the old .72 endpoint the
+   gradient was only ~.58 where the credit sits, and section headings read
+   straight through it as a doubled-text glitch. Ramping to near-black across
+   the last third clears the fixed chrome while the first two thirds stay soft,
+   so the footage still reads through the blend. */
+.page-fade,
+body.fade-dark .page-fade{
+  z-index:5!important;
+  background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.34) 40%,
+    rgba(0,0,0,.9) 68%,rgba(0,0,0,.98) 100%)!important}
+
+.page-fade-top{position:fixed;top:0;left:0;right:0;height:18vh;z-index:5;pointer-events:none;opacity:0;
+  transition:opacity .7s var(--ease);
+  background:linear-gradient(to bottom,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 38%,
+    rgba(0,0,0,.34) 68%,rgba(0,0,0,0) 100%)}
+body.fade-on .page-fade-top{opacity:1}
+@media(prefers-reduced-motion:reduce){.page-fade-top{display:none}}
+
+/* ---------- one set of chrome for the whole site ---------- */
+/* the landing's logo + nav now serve every page, so retire the old ones */
+.nav-item,.burger,.menu,.frame-logo{display:none!important}
+.frame-copy{color:rgba(255,254,238,.28)}
+
+/* the shared nav needs to clear the page's top padding */
+.zb-logo,.zb-nav{mix-blend-mode:normal}
+.zb-nav a.on{opacity:1}   /* the animated rule lives in zb.css */
+
+/* ---------- alignment: match the landing's centred axis ---------- */
+.lpage .work-head{justify-content:center}
+.lpage .dir-intro{margin-left:auto;margin-right:auto;text-align:center}
+.lpage .marquee{border-color:rgba(255,254,238,.15)}
+
+/* ---------- header spacing: tightened for Team & Contact ----------
+   Like #work, eliminate the legacy 80vh min-height and 26.67vh padding-top
+   that produced an oversized empty gap under the fixed navigation chrome. */
+#team > .page-inner:first-child,
+#contact > .contact-inner:first-child{
+  min-height:0;
+  padding-top:clamp(120px,14vh,152px);
+}
+#team .dir-intro{
+  margin:0 auto clamp(36px,5.5vh,54px);
+}
+#team .dir-intro .eyebrow{
+  margin-bottom:14px!important;
+}
+#team .dir-intro p.muted{
+  margin-top:18px;
+}
+@media(max-width:1024px){
+  #team > .page-inner:first-child,
+  #contact > .contact-inner:first-child{padding-top:112px}
+}
+@media(max-width:760px){
+  #team > .page-inner:first-child,
+  #contact > .contact-inner:first-child{padding-top:96px}
+}
+
+/* Contact layout: Send Inquiry placed before info */
+.contact-info-col{
+  padding-top:clamp(8px,2vh,32px);
+}
+@media(max-width:995px){
+  .contact-info-col{padding-top:0}
+}
+.contact-photo{
+  border-radius:var(--r);
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease);
+}
+.contact-photo:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,254,238,.45);
+  box-shadow:0 12px 36px rgba(0,0,0,.6);
+}
+
+/* ===================================================================
+   OUR WORK — one fixed backdrop; only the content scrolls over it.
+   The video is mounted on <body>, not inside .page, because .page.active
+   animates a transform and a transformed ancestor would capture
+   position:fixed and stretch the video to the full scroll height.
+   =================================================================== */
+.work-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  opacity:0;visibility:hidden;transition:opacity .8s var(--ease),visibility .8s}
+body.work-active .work-bg{opacity:1;visibility:visible}
+.work-bg video{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.work-bg-scrim{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.58),rgba(0,0,0,.76) 42%,rgba(0,0,0,.9))}
+
+/* pages paint above the backdrop; Work turns transparent to reveal it */
+.page{position:relative;z-index:1}
+body.work-active #work{background:transparent}
+#work .work-cat{background:transparent}
+
+/* ---------- header: tightened (matching #team & #contact) ----------
+   Eliminate the oversized 196px top gap so the title, stats, and search
+   sit at the exact same balanced vertical offset as Team and Contact. */
+#work .work-cat{min-height:0;padding-top:0;padding-bottom:0}
+#work .work-cat .in{min-height:0;padding-bottom:0;align-items:center}
+#work .work-cat .in:first-child{padding-top:clamp(120px,14vh,152px)}
+#work .work-cat .eyebrow{margin-bottom:14px!important}
+#work .work-cat h1{margin:10px 0 12px}
+/* the standfirst is supporting copy, not a headline */
+#work .work-cat .lead{color:rgba(255,254,238,.7);font-size:var(--s1);max-width:470px;line-height:1.55}
+
+#work .work-cat .stats-in{padding-top:clamp(14px,2vh,20px);padding-bottom:0}
+#work .work-stat{padding:16px 20px}
+#work .yt-cta{margin-top:clamp(24px,3vh,32px);padding:8px 18px;align-self:center;width:auto;
+  font-size:calc(var(--s0) - 1px);letter-spacing:.1em;gap:8px}
+
+@media(max-width:1024px){
+  #work .work-cat .in:first-child{padding-top:112px}
+  #work .work-cat .stats-in{padding-top:14px}
+}
+@media(max-width:760px){
+  #work .work-cat .in:first-child{padding-top:96px}
+  #work .work-cat .stats-in{padding-top:12px}
+  #work .work-stat{padding:13px 12px}
+  #work .yt-cta{margin-top:18px;font-size:10px;padding:6px 14px}
+}
+
+/* ---------- stats: glass, so the footage reads through ---------- */
+#work .work-stats{background:rgba(255,254,238,.16);border-color:rgba(255,254,238,.16)}
+#work .work-stat{background:rgba(6,6,6,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#work .work-stat b{letter-spacing:.02em}
+
+#work .yt-cta{border-color:rgba(255,254,238,.34);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  background:rgba(6,6,6,.4)}
+#work .yt-cta:hover{background:var(--white);color:#000;border-color:var(--white)}
+
+/* ---------- catalogue controls: stacked on the centre axis ---------- */
+#work .filters{justify-content:center;margin:clamp(20px,2.5vh,26px) 0 clamp(24px,3vh,34px);gap:8px}
+#work .filter{padding:7px 15px;font-size:11px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);background:rgba(6,6,6,.4)}
+/* The selected pill was black text on the dark glass: `.lpage .filter.on` set a
+   white background, but `#work .filter` (an ID) overrode the background while
+   the black colour survived — so the active year was invisible. Selected state
+   is now white text on a lifted glass, matching the rest of the page. */
+#work .filter.on{background:rgba(255,254,238,.15);color:var(--white);border-color:var(--white)}
+#work .filter.on:hover{color:var(--white);border-color:var(--white)}
+
+/* ---------- the grid ---------- */
+/* the base sheet owns the column counts (3 / 2 at 900 / 1 at 560); we only
+   set the gutter, so there is one source of truth for the breakpoints */
+#work .work-grid{gap:10px;padding-bottom:clamp(150px,22vh,230px)}
+@media(max-width:560px){#work .work-grid{gap:12px}}
+
+#work .work-card{background:#080808;border:1px solid rgba(255,254,238,.09);
+  transition:transform .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease)}
+#work .work-card:hover{transform:translateY(-4px);border-color:rgba(255,254,238,.3);
+  box-shadow:0 14px 40px rgba(0,0,0,.6)}
+#work .work-card .play{width:54px;height:54px;background:rgba(0,0,0,.45);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);font-size:15px;padding-left:3px}
+#work .work-card:hover .play{background:rgba(255,254,238,.92);color:#000;border-color:transparent}
+#work .no-res{grid-column:1/-1;text-align:center;padding:60px 0}
+
+@media(prefers-reduced-motion:reduce){
+  #work .work-card,#work .work-card img{transition:none}
+  #work .work-card:hover{transform:none}
+}
+
+/* ===================================================================
+   INQUIRY FORM DIALOG
+   The contact band is now the trigger; the form opens over the page.
+   The form element was MOVED out of #contact, which means the `.lpage`
+   overrides that make inputs legible on black no longer reach it — the
+   base register paints them var(--black) on transparent, i.e. black on
+   black. Every colour it needs is therefore restated here.
+   =================================================================== */
+.modal.form-modal{background:rgba(0,0,0,.975);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.form-modal-box{width:min(620px,100%);max-height:86vh;overflow-y:auto;padding:6px 4px}
+.form-modal-eyebrow{text-align:center;color:rgba(255,254,238,.5);margin-bottom:14px}
+.form-modal-box h3{font-size:var(--s3);font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;text-align:center;color:#fff;line-height:1.2}
+
+.form-modal .cform label{color:rgba(255,254,238,.55)}
+.form-modal .cform input,
+.form-modal .cform select,
+.form-modal .cform textarea{color:var(--white);border-bottom-color:rgba(255,254,238,.18)}
+.form-modal .cform input::placeholder,
+.form-modal .cform textarea::placeholder{color:rgba(255,254,238,.3)}
+.form-modal .cform input:focus,
+.form-modal .cform select:focus,
+.form-modal .cform textarea:focus{border-bottom-color:var(--white)}
+.form-modal .cform select option{background:#0a0a0a;color:#fffeee}
+.form-modal .csend{background:var(--white);color:#000}
+.form-modal .csend:hover{opacity:.85}
+.form-modal .csend.ok{background:#2e6b3e;color:#fff}
+.form-modal .cform-status{color:rgba(255,254,238,.7);text-align:center;margin-top:16px;font-size:13px;line-height:1.4;transition:all .3s var(--ease);min-height:1.4em}
+.form-modal .cform-status.err{color:#ff6b6b;background:rgba(255,107,107,.08);padding:8px 12px;border:1px solid rgba(255,107,107,.25);border-radius:4px}
+.form-modal .cform-status.ok{color:#51cf66;background:rgba(81,207,102,.08);padding:8px 12px;border:1px solid rgba(81,207,102,.25);border-radius:4px}
+
+/* the band is a real button now, so reset the UA chrome and signal it is clickable */
+#contact .contact-photo{display:block;width:100%;padding:0;font-family:var(--font);
+  cursor:pointer;transition:border-color .5s var(--ease),transform .5s var(--ease)}
+#contact .contact-photo span{transition:color .4s var(--ease),letter-spacing .5s var(--ease)}
+#contact .contact-photo:hover{border-color:rgba(255,254,238,.42)}
+#contact .contact-photo:hover span{color:#fff;letter-spacing:.26em}
+#contact .contact-photo:focus-visible{outline:1px solid var(--white);outline-offset:6px}
+
+/* ===================================================================
+   SOFTENED CORNERS
+   Every rectangular plate, card and band picks up a small radius. The
+   pill controls (search, filters, CTA) and the circular play glyph are
+   already round and are left alone.
+   NOTE: this intentionally departs from the previous binary-radius rule
+   (0 or full pill) that the rest of the system was built on.
+   =================================================================== */
+#work .work-card,
+#team .dir-avatar,
+.dir-modal .dir-avatar,
+#contact .contact-photo,
+.frame16{border-radius:var(--r);overflow:hidden}
+#work .work-stats{border-radius:var(--r);overflow:hidden}
+#work .work-stat{border-radius:0}
+.csend{border-radius:var(--r-sm)}
+#work .no-thumb,#work .work-card .soon{border-radius:var(--r)}
+
+/* iOS zooms the whole viewport when a focused field renders under 16px. The
+   scale step took --s1 to 12.5px on phones, so fields are pinned to 16px there.
+   This affects only the typed value — labels keep the smaller scale — and stops
+   the page lurching on focus. */
+@media(max-width:760px){
+  .cform input,.cform select,.cform textarea,#work .search{font-size:16px}
+}
+
+/* ---------- tablet & phone: page titles ----------
+   The scale's minimums already pull body copy down at these widths, but --s4
+   is still fluid on tablet (~35px at 834), so titles stayed large while
+   everything around them shrank. Overridden here at the point the variable is
+   CONSUMED rather than by redefining --s4 in a media query: applyTheme() writes
+   the tokens as inline styles on <html>, and an inline style beats any
+   stylesheet rule, so a :root override would silently do nothing.
+   fitHeadlines() clears its inline size before measuring, so it still shrinks
+   a title further if one overflows — it only ever goes smaller from here.
+   Targeted by page id, not by .h-xl: the Work title is `class="fit"` only and
+   carries no .h-xl, so a class-based rule silently missed it and left that one
+   page's heading at the --s4 floor while the others came down. The id selectors
+   also clear `.lpage .h-xl` on specificity. */
+@media(max-width:1024px){
+  #work h1,#team h1,#contact h1{font-size:clamp(20px,3.4vw,29px)}
+}
+@media(max-width:760px){
+  #work h1,#team h1,#contact h1{font-size:clamp(19px,5vw,23px)}
+}
+
+/* ===================================================================
+   TEAM HEADSHOTS
+   Real photographs replace the monogram plates. The plate keeps its
+   gradient as the colour behind a still-loading image, and the monogram
+   path stays intact for any member added without a photo.
+   =================================================================== */
+.dir-avatar img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 22%;display:block}
+/* the style caption (.dir-avatar::after) is drawn over the image — without a
+   scrim it sat on whatever the photo happened to put behind it */
+.dir-avatar.has-photo::before{content:"";position:absolute;left:0;right:0;bottom:0;
+  height:46%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72) 62%,rgba(0,0,0,.88))}
+.dir-avatar.has-photo::after{z-index:2;color:rgba(255,254,238,.9)}
+/* faces read better at full strength; the carousel's own blur still sets depth */
+#team .dir-card.is-front .dir-avatar.has-photo{filter:none}
+
+/* ===================================================================
+   PROJECT MODAL — poster frame, credits, behind-the-scenes, notes.
+   Mounted at body level like the other dialogs, so it sits outside
+   .lpage and every muted colour is stated explicitly rather than
+   inherited from the light register.
+   =================================================================== */
+/* The dialog itself must NOT scroll: backdrop-filter makes it a containing
+   block for position:fixed, so a scrolling dialog drags the fixed close button
+   off the top with it (measured -250px at scrollTop 250). The inner box scrolls
+   instead — the same arrangement the profile and inquiry dialogs already use. */
+.modal.proj-modal{background:rgba(0,0,0,.975);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  align-content:start;overflow:hidden;padding:70px 24px 40px}
+.proj-box{width:min(820px,100%);margin:0 auto;
+  max-height:calc(100dvh - 110px);overflow-y:auto;
+  scrollbar-width:thin}
+@media(max-width:760px){
+  .proj-box{max-height:calc(100dvh - 92px)}
+}
+
+/* poster frame: the image is the resting state, the player replaces it on click */
+.proj-stage{position:relative;overflow:hidden;border-radius:var(--r);background:#080808;
+  border:1px solid rgba(255,254,238,.10)}
+.proj-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.proj-stage .proj-player{position:absolute;inset:0;z-index:3}
+.proj-stage .proj-player iframe{width:100%;height:100%;border:0;display:block}
+.proj-stage.playing img,.proj-stage.playing .proj-play{opacity:0;pointer-events:none}
+/* remove play button in the preview of the song in the thumbnail */
+.proj-stage:not(.bts) .proj-play,
+#projPlay{display:none!important}
+.proj-stage:not(.bts){cursor:pointer}
+.proj-stage:not(.bts) img{transition:transform .4s var(--ease)}
+.proj-stage:not(.bts):hover img{transform:scale(1.015)}
+
+.proj-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+  width:66px;height:66px;border-radius:50%;border:1px solid rgba(255,255,255,.75);
+  background:rgba(0,0,0,.42);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  cursor:pointer;transition:background .45s var(--ease),transform .45s var(--ease),
+  border-color .45s var(--ease),opacity .4s var(--ease)}
+/* the triangle is drawn, not typed — a glyph sat off-centre inside the circle */
+.proj-play::before{content:"";display:block;position:absolute;top:50%;left:calc(50% + 2px);
+  transform:translate(-50%,-50%);border-style:solid;border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent #fff;transition:border-color .45s var(--ease)}
+.proj-play:hover,.proj-play:focus-visible{background:rgba(255,254,238,.94);
+  border-color:transparent;transform:translate(-50%,-50%) scale(1.06)}
+.proj-play:hover::before,.proj-play:focus-visible::before{border-left-color:#000}
+
+/* head: portrait key art on the left, title block set beside it */
+.proj-head{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);
+  gap:30px;align-items:start;
+  margin-top:22px;padding-bottom:24px;border-bottom:1px solid rgba(255,254,238,.12)}
+/* most works carry no poster — the title block then takes the full width */
+.proj-head.no-art{grid-template-columns:1fr}
+.proj-head-text{display:flex;flex-direction:column;align-items:flex-start}
+.proj-cat{font-size:var(--s0);letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(255,254,238,.45);margin-bottom:10px}
+.proj-head h3{font-size:var(--s3);font-weight:700;text-transform:uppercase;
+  letter-spacing:.02em;line-height:1.15;color:#fff}
+.proj-head p{color:rgba(255,254,238,.6);font-size:var(--s1);margin-top:8px}
+
+/* Enlarged Play on YouTube Button */
+.proj-modal .modal-yt{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:22px;align-self:flex-start;font-family:var(--font);
+  font-size:clamp(13px, 1.15vw, 15px);font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:#000;background:#ffffff;border:1px solid #ffffff;
+  border-radius:999px;padding:13px 26px;white-space:nowrap;text-decoration:none;
+  cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.45);
+  transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.proj-modal .modal-yt .yt-icon,.proj-modal .modal-yt svg{
+  width:20px;height:20px;flex-shrink:0;fill:currentColor;transition:transform .25s var(--ease)}
+.proj-modal .modal-yt:hover,.proj-modal .modal-yt:focus-visible{
+  background:#ff0000;border-color:#ff0000;color:#ffffff;
+  transform:translateY(-2px) scale(1.02);box-shadow:0 8px 28px rgba(255,0,0,.4)}
+.proj-modal .modal-yt:hover .yt-icon,.proj-modal .modal-yt:hover svg{transform:scale(1.12)}
+.proj-modal .modal-yt:active{transform:translateY(0) scale(.99)}
+
+/* detail stack */
+.proj-detail{padding-top:24px}
+.proj-story{color:rgba(255,254,238,.72);line-height:1.9;font-size:var(--s1);max-width:64ch}
+.proj-block{margin-top:34px}
+.proj-sub{font-size:var(--s0);letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(255,254,238,.5);margin-bottom:16px}
+.proj-credits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 34px}
+.proj-credits dt{font-size:var(--s0);letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,254,238,.42);margin-bottom:5px}
+.proj-credits dd{font-size:var(--s1);color:#fff;line-height:1.4}
+.proj-notes p{color:rgba(255,254,238,.72);line-height:1.9;font-size:var(--s1);
+  max-width:64ch;margin-bottom:14px}
+.proj-notes p:last-child{margin-bottom:0}
+
+@media(max-width:760px){
+  .modal.proj-modal{padding:60px 16px 32px}
+  .proj-credits{grid-template-columns:1fr;gap:12px}
+  .proj-play{width:54px;height:54px}
+  .proj-modal .modal-yt{font-size:12px;padding:11px 20px;gap:8px;margin-top:16px}
+  .proj-modal .modal-yt .yt-icon,.proj-modal .modal-yt svg{width:18px;height:18px}
+}
+
+/* ===================================================================
+   SOCIAL ICON BUTTONS
+   Circular buttons carrying inline brand SVGs, replacing the old text
+   links. Styled here rather than in the inline sheet because
+   `.contact-block a:hover{color:var(--grey)}` sits later in that sheet
+   and would win the hover colour at equal specificity — pages.css
+   loads last, so these rules take it back.
+   NOTE: the system had no iconography at all before this; the design
+   system's "no icon set" rule no longer holds.
+   =================================================================== */
+.social-list{gap:10px;justify-content:center}
+.social-list a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  color:rgba(255,254,238,.72);background:rgba(255,254,238,.05);
+  border:1px solid rgba(255,254,238,.16);line-height:0;
+  transition:background .4s var(--ease),color .4s var(--ease),
+             border-color .4s var(--ease),transform .4s var(--ease)}
+.social-list a svg{width:17px;height:17px;fill:currentColor;display:block}
+.social-list a .social-fallback{font-size:13px;line-height:1;letter-spacing:0}
+/* invert on hover, matching the pill buttons elsewhere on the site */
+.social-list a:hover,.social-list a:focus-visible{background:var(--white);color:#000;
+  border-color:var(--white);transform:translateY(-2px)}
+.social-list a:focus-visible{outline:1px solid var(--white);outline-offset:3px}
+@media(max-width:760px){
+  .social-list{gap:9px}
+  .social-list a{width:38px;height:38px}
+  .social-list a svg{width:15px;height:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .social-list a{transition:background .2s,color .2s}
+  .social-list a:hover{transform:none}
+}
+/* wordmark stand-ins (Giphy) — sized to sit level with the SVG glyphs */
+.social-list a .social-word{font-size:9.5px;font-weight:700;letter-spacing:.06em;line-height:1}
+@media(max-width:760px){.social-list a .social-word{font-size:8.5px}}
+
+/* ---------- project key art: portrait poster in the head ---------- */
+.proj-keyart{margin:0;aspect-ratio:3/4;overflow:hidden;border-radius:var(--r);
+  border:1px solid rgba(255,254,238,.12);background:#080808}
+.proj-keyart img{width:100%;height:100%;object-fit:cover;display:block}
+/* The poster keeps its place beside the title at every width — it never drops
+   below. The column just narrows. */
+@media(max-width:1024px){
+  .proj-head{grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:24px}
+}
+@media(max-width:760px){
+  .proj-head{grid-template-columns:minmax(0,116px) minmax(0,1fr);gap:18px}
+  .proj-credits{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:380px){
+  .proj-head{grid-template-columns:minmax(0,96px) minmax(0,1fr);gap:14px}
+}
+
+/* ===================================================================
+   CATALOGUE HEAD — Approach 1: Cinematic Frosted Glass Search Bar
+   =================================================================== */
+#work .work-head{display:flex;justify-content:center;align-items:center;margin-top:clamp(32px,4vh,44px);width:100%}
+
+/* Glassmorphic Search Bar Container: 530px matches the exact span of the filter pills row */
+.search-wrap{position:relative;display:flex;align-items:center;width:100%;max-width:530px;
+  background:rgba(12,12,14,.55);border:1px solid rgba(255,254,238,.16);border-radius:999px;
+  padding:0 18px;height:44px;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 4px 20px rgba(0,0,0,.45),0 1px 0 rgba(255,254,238,.04) inset;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease)}
+.search-wrap:hover{border-color:rgba(255,254,238,.28);background:rgba(18,18,22,.68)}
+.search-wrap:focus-within{border-color:rgba(255,254,238,.6);background:rgba(20,20,24,.82);
+  box-shadow:0 4px 24px rgba(0,0,0,.6),0 0 16px rgba(255,254,238,.1),0 1px 0 rgba(255,254,238,.08) inset}
+
+/* Magnifier Icon */
+.search-icon{width:15px;height:15px;flex:0 0 auto;fill:none;stroke:rgba(255,254,238,.45);
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-right:12px;pointer-events:none;
+  transition:stroke .25s var(--ease)}
+.search-wrap:focus-within .search-icon{stroke:rgba(255,254,238,.92)}
+
+/* Search Input */
+.search-input{flex:1 1 auto;min-width:0;background:transparent;border:none;outline:none;
+  color:var(--white);font-family:var(--font);font-size:13.5px;letter-spacing:.02em;
+  padding:0;height:100%}
+.search-input::placeholder{color:rgba(255,254,238,.34);font-style:normal;transition:color .2s var(--ease)}
+.search-wrap:focus-within .search-input::placeholder{color:rgba(255,254,238,.22)}
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration{display:none}
+
+/* Custom Clear Button */
+.search-clear{flex:0 0 auto;background:rgba(255,254,238,.12);color:rgba(255,254,238,.75);
+  border:none;width:20px;height:20px;border-radius:50%;font-size:10px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  margin-left:8px;padding:0;line-height:1;
+  transition:background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.search-clear:hover{background:var(--white);color:#000;transform:scale(1.1)}
+.search-clear[hidden]{display:none}
+
+/* Search Results Count Badge */
+.search-count{flex:0 0 auto;font-family:var(--font);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,254,238,.48);margin-left:10px;white-space:nowrap;
+  pointer-events:none}
+.search-count:empty{display:none}
+
+@media(max-width:760px){
+  #work .work-head{margin-top:26px;gap:12px}
+  .search-wrap{height:40px;padding:0 14px;max-width:100%}
+  .search-input{font-size:16px} /* Prevents iOS auto-zoom */
+}
+
+/* ---------- stat band: one long pill ---------- */
+#work .work-stats{border-radius:999px;overflow:hidden}
+/* the 1px gutters are the band's background showing between cells, so the end
+   cells need their own rounding to follow the pill's outline */
+#work .work-stat:first-child{border-start-start-radius:999px;border-end-start-radius:999px}
+#work .work-stat:last-child{border-start-end-radius:999px;border-end-end-radius:999px}
+@media(max-width:900px){
+  /* folded to 2x2 the band is no longer a long bar — a soft rectangle reads
+     better than a stadium at that shape */
+  #work .work-stats{border-radius:22px}
+  #work .work-stat:first-child{border-radius:22px 0 0 0}
+  #work .work-stat:nth-child(2){border-radius:0 22px 0 0}
+  #work .work-stat:nth-child(3){border-radius:0 0 0 22px}
+  #work .work-stat:last-child{border-radius:0 0 22px 0}
+}
+
+/* ---------- hide the dialog scrollbar ---------- */
+/* the sheet still scrolls; only the indicator is suppressed */
+.proj-box,.dir-modal-box,.form-modal-box{scrollbar-width:none;-ms-overflow-style:none}
+.proj-box::-webkit-scrollbar,
+.dir-modal-box::-webkit-scrollbar,
+.form-modal-box::-webkit-scrollbar{width:0;height:0;display:none}
+
+/* ===================================================================
+   FILTERS — one row on every view
+   Seven pills (All + six years) wrapped to two lines on a phone. They
+   now sit on a single line with tighter padding and gap. nowrap plus a
+   scrollable overflow means an eighth year later scrolls rather than
+   silently wrapping again, and the scrollbar itself is suppressed.
+   =================================================================== */
+#work .filters{flex-wrap:nowrap;overflow-x:auto;
+  scrollbar-width:none;-ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch;
+  padding-inline:2px;   /* so the end pills' borders are not clipped */
+  scroll-snap-type:x proximity}
+#work .filters::-webkit-scrollbar{width:0;height:0;display:none}
+#work .filter{flex:0 0 auto;scroll-snap-align:center}
+
+@media(max-width:1024px){
+  #work .filters{gap:7px}
+  #work .filter{padding:8px 14px}
+}
+@media(max-width:760px){
+  #work .filters{gap:6px;margin:18px 0 24px}
+  #work .filter{padding:7px 10px;letter-spacing:.1em}
+}
+@media(max-width:380px){
+  #work .filters{gap:4px}
+  #work .filter{padding:6px 8px;letter-spacing:.06em}
+}
+
+
+
+/* ===================================================================
+   PROJECT SHEET — wider, and the detail runs in columns
+   The sheet was a 820px column with a single-column credit list, which
+   left most of the page empty on desktop while the credits ran long.
+   =================================================================== */
+.proj-box{width:min(1120px,100%)}
+#projCredits{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 30px}
+/* notes read as a set of short observations, so they column well too */
+.proj-notes{columns:2;column-gap:40px}
+.proj-notes p{max-width:none;break-inside:avoid;margin-bottom:16px}
+.proj-story{max-width:76ch}
+
+/* core-team names link through to the member's profile */
+.cred-link{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
+  position:relative;text-align:left}
+.cred-link::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+  background:currentColor;opacity:.32;transition:opacity .3s var(--ease)}
+.cred-link:hover::after,.cred-link:focus-visible::after{opacity:1}
+.cred-link:focus-visible{outline:1px solid rgba(255,254,238,.6);outline-offset:3px}
+.cred-amp{color:rgba(255,254,238,.4);padding:0 2px}
+
+@media(max-width:1024px){
+  #projCredits{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 26px}
+  .proj-notes{columns:2;column-gap:28px}
+}
+@media(max-width:760px){
+  #projCredits{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+  .proj-notes{columns:1}
+}
+@media(max-width:380px){
+  #projCredits{grid-template-columns:1fr}
+}
+
+/* ---------- synopsis: in the head column, under the YouTube link ---------- */
+.proj-head-text .proj-story{margin-top:22px;max-width:62ch;
+  color:rgba(255,254,238,.72);line-height:1.85;font-size:var(--s1)}
+
+/* ---------- artist's message, above the credits ---------- */
+.proj-quote{margin:0 0 34px;padding:22px 0 0;border-top:1px solid rgba(255,254,238,.12);
+  text-align:center}
+.proj-quote p{font-style:italic;line-height:1.7;font-size:var(--s2);
+  color:rgba(255,254,238,.9);max-width:60ch;margin:0 auto}
+.proj-quote cite{display:block;margin-top:14px;font-style:normal;
+  font-size:var(--s0);letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(255,254,238,.45)}
+@media(max-width:760px){.proj-head-text .proj-story{margin-top:18px}}
+
+/* ===================================================================
+   FAQ — under the team carousel
+   The heading is the control: a "?" that opens out to the full wording
+   on hover/focus, with the answers unfolding beneath.
+   =================================================================== */
+.faq{margin-top:clamp(40px,7vh,80px);text-align:center}
+.faq-toggle{display:inline-flex;align-items:center;justify-content:center;gap:0;
+  min-height:46px;padding:0 6px;border:1px solid var(--line-l);border-radius:40px;
+  background:rgba(6,6,6,.4);color:rgba(255,254,238,.75);cursor:pointer;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  transition:gap .5s var(--ease),padding .5s var(--ease),background .4s var(--ease),
+             color .4s var(--ease),border-color .4s var(--ease)}
+.faq-mark{width:34px;height:34px;flex:0 0 auto;display:grid;place-items:center;
+  border-radius:50%;font-size:var(--s2);line-height:1}
+/* the wording is clipped to nothing until the control is engaged, so the
+   collapsed state is a lone "?" and the expansion is the width animating */
+.faq-word{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;
+  font-size:var(--s0);letter-spacing:.22em;text-transform:uppercase;
+  transition:max-width .55s var(--ease),opacity .4s var(--ease)}
+.faq-toggle:hover,.faq-toggle:focus-visible,.faq-toggle.on{
+  gap:12px;padding:0 22px 0 6px;background:var(--white);color:#000;border-color:var(--white)}
+.faq-toggle:hover .faq-word,.faq-toggle:focus-visible .faq-word,.faq-toggle.on .faq-word{
+  max-width:22em;opacity:1}
+.faq-toggle:focus-visible{outline:1px solid var(--white);outline-offset:4px}
+
+.faq-list{margin:34px auto 0;max-width:720px;text-align:center}
+.faq-item{border-bottom:1px solid rgba(255,254,238,.12)}
+.faq-item:first-child{border-top:1px solid rgba(255,254,238,.12)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:center;gap:14px;
+  padding:20px 34px;background:none;border:0;cursor:pointer;color:var(--white);
+  font-family:var(--font);font-size:var(--s1);line-height:1.4;text-align:center;
+  position:relative;transition:background .4s var(--ease)}
+.faq-q:hover{background:#0e0e0c}
+.faq-q i{position:absolute;right:12px;width:9px;height:9px;flex:0 0 auto;
+  border-right:1px solid rgba(255,254,238,.6);border-bottom:1px solid rgba(255,254,238,.6);
+  transform:rotate(45deg) translateY(-2px);transition:transform .45s var(--ease)}
+.faq-item.open .faq-q i{transform:rotate(-135deg) translateY(-2px)}
+.faq-a{padding:0 34px 24px}
+.faq-a p{color:rgba(255,254,238,.7);line-height:1.9;font-size:var(--s1);
+  max-width:58ch;margin:0 auto}
+.faq-a[hidden]{display:none}
+
+@media(max-width:760px){
+  .faq-q{padding:17px 30px;font-size:calc(var(--s1) + .5px)}
+  .faq-a{padding:0 22px 20px}
+  .faq-list{margin-top:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  .faq-toggle,.faq-word,.faq-q i{transition:none}
+}

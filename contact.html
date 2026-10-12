@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Chinoétales Productions</title>
+<meta name="description" content="Contact Chinoétales Productions for music video commissions, commercial production, documentary projects, and creative consultation.">
+<link rel="canonical" href="https://chinoetales.com/contact.html">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chinoétales Productions">
+<meta property="og:title" content="Contact — Chinoétales Productions">
+<meta property="og:description" content="Contact Chinoétales Productions for music video commissions, commercial production, and creative consultation.">
+<meta property="og:image" content="img/social-card.jpg">
+<meta property="og:url" content="https://chinoetales.com/contact.html">
+
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://jfwynwnqeilaqtbgiuqc.supabase.co" crossorigin>
+<link rel="dns-prefetch" href="https://jfwynwnqeilaqtbgiuqc.supabase.co">
+<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="assets/zb.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="show-frame-logo light-frame">
+
+<a class="zb-logo" href="index.html" data-route="home"><img src="img/wordmark-white.png" alt="Chinoétales Productions"></a>
+<nav class="zb-nav">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work">Our Work</a>
+  <a href="team.html"    data-route="team">Our Team</a>
+  <a href="contact.html" data-route="contact" class="on">Contact</a>
+</nav>
+
+<button class="zb-burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="zb-menu" id="menu">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work">Our Work</a>
+  <a href="team.html"    data-route="team">Our Team</a>
+  <a href="contact.html" data-route="contact" class="on">Contact</a>
+</nav>
+
+<div class="page-fade-top" aria-hidden="true"></div>
+<div class="page-fade" id="pageFade" aria-hidden="true"></div>
+<div class="frame-copy" id="frameCopy">© 2026 Chinoétales Films Pvt. Ltd.</div>
+
+<section class="page lpage active" id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="eyebrow reveal" data-cms="pages.contact.eyebrow" style="margin-bottom:24px">Work With Us</p>
+      <h1 class="h-xl fit reveal" data-cms="pages.contact.title">Let's Talk.</h1>
+      <p class="lead reveal" data-cms="pages.contact.lead">Have a project? Want to collaborate, commission a film, or need creative consultation? Every conversation begins here.</p>
+      <button type="button" class="contact-photo reveal" id="cformOpen"
+              aria-haspopup="dialog" aria-controls="formModal">
+        <video class="vid" data-cms-src="assets.contactBand" data-cms-poster="assets.contactBandPoster" data-src="video/web-maya-ma.mp4" poster="video/poster-maya-ma.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span>Send Inquiry</span>
+      </button>
+    </div>
+    <div class="contact-info-col">
+      <div class="contact-block reveal"><h4>Email</h4><a id="cEmail1" href="mailto:chinoetales@gmail.com">chinoetales@gmail.com</a></div>
+      <div class="contact-block reveal"><h4>Phone</h4><div id="cPhone"></div></div>
+      <div class="contact-block reveal"><h4>Location</h4><p id="cLoc">Based in Kathmandu, Nepal<br>Available for projects globally</p></div>
+      <div class="contact-block reveal"><h4>Connect</h4><div id="cSocial" class="social-list"></div></div>
+      <div class="contact-block reveal"><h4>Response Time</h4><p>We typically respond within 48 hours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Inquiry Form Modal -->
+<div class="modal form-modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
+  <button class="modal-close" id="formClose" aria-label="Close inquiry form">Close ✕</button>
+  <div class="form-modal-box">
+    <p class="eyebrow form-modal-eyebrow">Work With Us</p>
+    <h3 id="formModalTitle">Send Inquiry</h3>
+    <form class="cform" id="cform" name="inquiry" method="POST"
+          data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="inquiry">
+      <p class="hp"><label>Do not fill this in <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row">
+        <div>
+          <label for="f-name">Your Name *</label>
+          <input id="f-name" required name="name" minlength="2" maxlength="80" autocomplete="name" placeholder="Full name" aria-required="true" aria-describedby="cformStatus">
+        </div>
+        <div>
+          <label for="f-email">Email *</label>
+          <input id="f-email" required type="email" name="email" maxlength="120" autocomplete="email" placeholder="name@domain.com" aria-required="true" aria-describedby="cformStatus">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="f-type">Project Type *</label>
+          <select id="f-type" required name="type" aria-required="true">
+            <option value="">Select project type…</option>
+            <option value="Music Video">Music Video</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-timeline">Timeline</label>
+          <select id="f-timeline" name="timeline">
+            <option value="Immediate">Immediate</option>
+            <option value="1–3 Months">1–3 Months</option>
+            <option value="3–6 Months">3–6 Months</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        </div>
+      </div>
+      <label for="f-artist">Artist / Brand (optional)</label>
+      <input id="f-artist" name="artist" maxlength="100" placeholder="e.g. Band name, artist, or production client">
+      <label for="f-brief">Your Message / Creative Brief *</label>
+      <textarea id="f-brief" required name="brief" minlength="15" maxlength="3000" placeholder="Tell us about your project vision, timeline, deliverables, or references (min 15 characters)..." aria-required="true" aria-describedby="cformStatus"></textarea>
+      <button class="csend" id="csend" type="submit">Send Inquiry</button>
+      <p class="cform-status" id="cformStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/config.js?v=2.1"></script>
+<script src="assets/lib/supabase.js?v=2.1"></script>
+<script src="assets/app.js?v=2.1"></script>
+<script>
+  (function burgerInit() {
+    const b = document.getElementById('burger'), m = document.getElementById('menu');
+    if (!b || !m) return;
+    const anchor = () => {
+      const r = b.getBoundingClientRect();
+      m.style.setProperty('--ox', (r.left + r.width / 2) + 'px');
+      m.style.setProperty('--oy', (r.top + r.height / 2) + 'px');
+    };
+    const set = o => {
+      if (o) anchor();
+      document.body.classList.toggle('zb-menu-open', o);
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    };
+    b.addEventListener('click', () => set(!document.body.classList.contains('zb-menu-open')));
+    m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+    addEventListener('resize', () => { if (document.body.classList.contains('zb-menu-open')) anchor(); });
+  })();
+</script>
+</body>
+</html>

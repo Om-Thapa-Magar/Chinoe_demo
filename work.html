@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — Chinoétales Productions</title>
+<meta name="description" content="Catalogue of music videos and cinematic films created by Chinoétales Productions. 100+ films, 50+ artists.">
+<link rel="canonical" href="https://chinoetales.com/work.html">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chinoétales Productions">
+<meta property="og:title" content="Our Work — Chinoétales Productions">
+<meta property="og:description" content="Catalogue of music videos and cinematic films created by Chinoétales Productions.">
+<meta property="og:image" content="img/social-card.jpg">
+<meta property="og:url" content="https://chinoetales.com/work.html">
+
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://jfwynwnqeilaqtbgiuqc.supabase.co" crossorigin>
+<link rel="dns-prefetch" href="https://jfwynwnqeilaqtbgiuqc.supabase.co">
+<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="assets/zb.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="work-active show-frame-logo light-frame">
+
+<a class="zb-logo" href="index.html" data-route="home"><img src="img/wordmark-white.png" alt="Chinoétales Productions"></a>
+<nav class="zb-nav">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work" class="on">Our Work</a>
+  <a href="team.html"    data-route="team">Our Team</a>
+  <a href="contact.html" data-route="contact">Contact</a>
+</nav>
+
+<button class="zb-burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="zb-menu" id="menu">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work" class="on">Our Work</a>
+  <a href="team.html"    data-route="team">Our Team</a>
+  <a href="contact.html" data-route="contact">Contact</a>
+</nav>
+
+<div class="page-fade-top" aria-hidden="true"></div>
+<div class="page-fade" id="pageFade" aria-hidden="true"></div>
+<div class="frame-copy" id="frameCopy">© 2026 Chinoétales Films Pvt. Ltd.</div>
+
+<div class="work-bg" aria-hidden="true">
+  <video id="workBg" data-cms-src="assets.workBand" data-cms-poster="assets.workBandPoster"
+    data-src="video/work-bts.mp4" poster="video/poster-work-bts.jpg"
+    muted loop playsinline preload="none"></video>
+  <div class="work-bg-scrim"></div>
+</div>
+
+<section class="page lpage active" id="work">
+  <div class="work-cat reveal">
+    <div class="in">
+      <p class="eyebrow" data-cms="pages.work.eyebrow" style="color:rgba(255,254,238,.55)">Chinoétales Productions</p>
+      <h1 class="fit" data-cms="pages.work.title">Catalogue of Work</h1>
+      <p class="lead" data-cms="pages.work.lead">A working reference of our released music-video output, titles, in-house director credits, and the artists we've built with.</p>
+    </div>
+    <div class="in stats-in">
+      <div class="work-stats">
+        <div class="work-stat"><b id="wsV">100+</b><span>Videos Released</span></div>
+        <div class="work-stat"><b id="wsY">2021–26</b><span>Years Active</span></div>
+        <div class="work-stat"><b id="wsA">50+</b><span>Artists &amp; Bands</span></div>
+        <div class="work-stat"><b id="wsD">20+</b><span>Team Chinoé</span></div>
+      </div>
+      <a class="yt-cta" id="wPlaylist" href="#" target="_blank" rel="noopener">▶ Watch the full music-video playlist on YouTube</a>
+    </div>
+  </div>
+
+  <div class="page-inner" style="padding-top:0">
+    <div class="work-head reveal">
+      <div class="search-wrap" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="15.4" y1="15.4" x2="20.5" y2="20.5"/>
+        </svg>
+        <input class="search-input" id="search" type="search" placeholder="Search title or artist…" autocomplete="off" spellcheck="false" aria-label="Search title or artist">
+        <button type="button" class="search-clear" id="searchClear" aria-label="Clear search" hidden>✕</button>
+        <span class="search-count" id="searchCount" aria-live="polite"></span>
+      </div>
+    </div>
+    <div class="filters reveal" id="filters"></div>
+    <div class="work-grid" id="workGrid"></div>
+  </div>
+</section>
+
+<!-- Project Video Player & Credits Modal -->
+<div class="modal proj-modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="modal-close" id="modalClose">Close ✕</button>
+  <div class="modal-box proj-box">
+    <div class="frame16 proj-stage">
+      <img id="projPoster" alt="" decoding="async">
+      <button class="proj-play" id="projPlay" type="button" aria-label="Play film" hidden></button>
+      <div class="proj-player" id="projPlayer"></div>
+    </div>
+    <div class="proj-head" id="projHead">
+      <figure class="proj-keyart" id="projKeyart">
+        <img id="projKeyartImg" alt="" decoding="async">
+      </figure>
+      <div class="proj-head-text">
+        <p class="proj-cat" id="projCat"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalArtist"></p>
+        <a class="modal-yt" id="modalYt" target="_blank" rel="noopener" aria-label="Watch on YouTube"><svg class="yt-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>Watch on YouTube</span></a>
+        <p class="proj-story" id="projStory"></p>
+      </div>
+    </div>
+    <div class="proj-detail">
+      <blockquote class="proj-quote" id="projQuote">
+        <p id="projQuoteText"></p><cite id="projQuoteWho"></cite>
+      </blockquote>
+      <div class="proj-block" id="projCreditsBlock">
+        <p class="proj-sub">Production Credits</p>
+        <dl class="proj-credits" id="projCredits"></dl>
+      </div>
+      <div class="proj-block" id="projBtsBlock">
+        <p class="proj-sub">Behind the Scenes</p>
+        <div class="frame16 proj-stage bts">
+          <img id="btsPoster" alt="" decoding="async">
+          <button class="proj-play" id="btsPlay" type="button" aria-label="Play behind the scenes"></button>
+          <div class="proj-player" id="btsPlayer"></div>
+        </div>
+      </div>
+      <div class="proj-block" id="projNotesBlock">
+        <p class="proj-sub">Production Notes</p>
+        <div class="proj-notes" id="projNotes"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Team Director Modal -->
+<div class="modal dir-modal" id="dirModal" role="dialog" aria-modal="true" aria-labelledby="dirMName">
+  <button class="modal-close" id="dirClose" aria-label="Close profile">Close ✕</button>
+  <div class="dir-modal-box">
+    <div class="dir-avatar" id="dirMAvatar"></div>
+    <div class="dir-modal-body">
+      <h3 id="dirMName"></h3>
+      <p class="dir-role" id="dirMRole"></p>
+      <p class="dir-about" id="dirMAbout"></p>
+      <p class="dir-sub" id="dirMWorksLabel">Notable Works</p>
+      <ul class="dir-works" id="dirMWorks"></ul>
+      <p class="dir-statement" id="dirMQ"></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/config.js?v=2.1"></script>
+<script src="assets/lib/supabase.js?v=2.1"></script>
+<script src="assets/app.js?v=2.1"></script>
+<script>
+  (function burgerInit() {
+    const b = document.getElementById('burger'), m = document.getElementById('menu');
+    if (!b || !m) return;
+    const anchor = () => {
+      const r = b.getBoundingClientRect();
+      m.style.setProperty('--ox', (r.left + r.width / 2) + 'px');
+      m.style.setProperty('--oy', (r.top + r.height / 2) + 'px');
+    };
+    const set = o => {
+      if (o) anchor();
+      document.body.classList.toggle('zb-menu-open', o);
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    };
+    b.addEventListener('click', () => set(!document.body.classList.contains('zb-menu-open')));
+    m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+    addEventListener('resize', () => { if (document.body.classList.contains('zb-menu-open')) anchor(); });
+  })();
+</script>
+</body>
+</html>

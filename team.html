@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — Chinoétales Productions</title>
+<meta name="description" content="Meet Team Chinoé: direction, cinematography, production design, art direction, editing, styling, and operations.">
+<link rel="canonical" href="https://chinoetales.com/team.html">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chinoétales Productions">
+<meta property="og:title" content="Our Team — Chinoétales Productions">
+<meta property="og:description" content="Meet Team Chinoé: direction, cinematography, production design, art direction, editing, styling, and operations.">
+<meta property="og:image" content="img/social-card.jpg">
+<meta property="og:url" content="https://chinoetales.com/team.html">
+
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://jfwynwnqeilaqtbgiuqc.supabase.co" crossorigin>
+<link rel="dns-prefetch" href="https://jfwynwnqeilaqtbgiuqc.supabase.co">
+<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="assets/zb.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="show-frame-logo light-frame">
+
+<a class="zb-logo" href="index.html" data-route="home"><img src="img/wordmark-white.png" alt="Chinoétales Productions"></a>
+<nav class="zb-nav">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work">Our Work</a>
+  <a href="team.html"    data-route="team" class="on">Our Team</a>
+  <a href="contact.html" data-route="contact">Contact</a>
+</nav>
+
+<button class="zb-burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="zb-menu" id="menu">
+  <a href="index.html"   data-route="home">Home</a>
+  <a href="work.html"    data-route="work">Our Work</a>
+  <a href="team.html"    data-route="team" class="on">Our Team</a>
+  <a href="contact.html" data-route="contact">Contact</a>
+</nav>
+
+<div class="page-fade-top" aria-hidden="true"></div>
+<div class="page-fade" id="pageFade" aria-hidden="true"></div>
+<div class="frame-copy" id="frameCopy">© 2026 Chinoétales Films Pvt. Ltd.</div>
+
+<section class="page lpage active" id="team">
+  <div class="page-inner">
+    <div class="dir-intro">
+      <p class="eyebrow reveal" data-cms="pages.team.eyebrow" style="margin-bottom:14px">Team Chinoé</p>
+      <h1 class="h-xl fit reveal" data-cms="pages.team.title">Love, Passion &amp; Film</h1>
+      <p class="muted reveal" data-cms="pages.team.lead">Team Chinoé is the full creative and operational engine behind Chinoétales, direction, cinematography, production design, art direction, editing, styling, and the operations that hold it all together. Meet the people behind the work.</p>
+    </div>
+    <div class="dir-carousel">
+      <div class="dir-arrows">
+        <button type="button" class="dir-arrow" id="dirPrev" aria-label="Previous team members">&#8592;</button>
+        <button type="button" class="dir-arrow" id="dirNext" aria-label="Next team members">&#8594;</button>
+      </div>
+      <div class="dir-track" id="dirList" tabindex="-1"
+           aria-label="Team Chinoé members, swipe or use arrow buttons"></div>
+    </div>
+
+    <section class="faq" id="faq">
+      <button type="button" class="faq-toggle" id="faqToggle" aria-expanded="false" aria-controls="faqList">
+        <span class="faq-mark" aria-hidden="true">?</span>
+        <span class="faq-word">Frequently Asked Questions</span>
+      </button>
+      <div class="faq-list" id="faqList" hidden></div>
+    </section>
+  </div>
+</section>
+
+<!-- Team Director Profile Modal -->
+<div class="modal dir-modal" id="dirModal" role="dialog" aria-modal="true" aria-labelledby="dirMName">
+  <button class="modal-close" id="dirClose" aria-label="Close profile">Close ✕</button>
+  <div class="dir-modal-box">
+    <div class="dir-avatar" id="dirMAvatar"></div>
+    <div class="dir-modal-body">
+      <h3 id="dirMName"></h3>
+      <p class="dir-role" id="dirMRole"></p>
+      <p class="dir-about" id="dirMAbout"></p>
+      <p class="dir-sub" id="dirMWorksLabel">Notable Works</p>
+      <ul class="dir-works" id="dirMWorks"></ul>
+      <p class="dir-statement" id="dirMQ"></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/config.js?v=2.1"></script>
+<script src="assets/lib/supabase.js?v=2.1"></script>
+<script src="assets/app.js?v=2.1"></script>
+<script>
+  (function burgerInit() {
+    const b = document.getElementById('burger'), m = document.getElementById('menu');
+    if (!b || !m) return;
+    const anchor = () => {
+      const r = b.getBoundingClientRect();
+      m.style.setProperty('--ox', (r.left + r.width / 2) + 'px');
+      m.style.setProperty('--oy', (r.top + r.height / 2) + 'px');
+    };
+    const set = o => {
+      if (o) anchor();
+      document.body.classList.toggle('zb-menu-open', o);
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    };
+    b.addEventListener('click', () => set(!document.body.classList.contains('zb-menu-open')));
+    m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+    addEventListener('resize', () => { if (document.body.classList.contains('zb-menu-open')) anchor(); });
+  })();
+</script>
+</body>
+</html>
